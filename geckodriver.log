@@ -1,0 +1,240 @@
+1642354130012	geckodriver	INFO	Listening on 127.0.0.1:54183
+1642354132036	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54184" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileXcB19J"
+1642354168707	geckodriver	INFO	Listening on 127.0.0.1:54267
+1642354170743	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54268" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileVU3duN"
+1642354171693	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileVU3duN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54268/devtools/browser/10edf008-8d48-425f-a6c6-e350ec81ac0d
+1642354174444	Marionette	INFO	Listening on port 54273
+1642354174594	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1642355514147	Marionette	INFO	Stopped listening on port 54273
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+\\Local\\Temp\\rust_mozprofilexa0HX5"
+1642354353340	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilexa0HX5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54335/devtools/browser/b0cb5bd9-fc77-4f21-bb9b-1ae6dbb2a188
+1642354356086	Marionette	INFO	Listening on port 54340
+1642354356593	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Parent 1708, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1642355515067	Marionette	INFO	Stopped listening on port 54340
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+mozprofile37O2CO"
+1642354359882	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile37O2CO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54371/devtools/browser/9ed61ef9-3eed-4c64-b467-d6c6de6e0071
+1642354362939	Marionette	INFO	Listening on port 54389
+1642354363018	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1642354373675	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:239:19
+TimedPromise@chrome://remote/content/marionette/sync.js:224:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+1642355516812	Marionette	INFO	Stopped listening on port 54389
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofile37O2CO\protections.sqlite
+1642355519018	geckodriver	INFO	Listening on 127.0.0.1:54566
+1642355521076	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54567" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileI7MsYw"
+1642355522182	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileI7MsYw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54567/devtools/browser/194ab0da-6eb8-4b71-8217-60b74291d6af
+1642355525064	Marionette	INFO	Listening on port 54572
+1642355525415	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1642355525469	geckodriver	INFO	Listening on 127.0.0.1:54599
+1642355527499	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54600" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileCvzRTm"
+1642355527916	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileCvzRTm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54600/devtools/browser/51cc0d87-bba7-4945-a2d6-f914179a48df
+1642355530706	Marionette	INFO	Listening on port 54615
+1642355530757	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1642355537636	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:239:19
+TimedPromise@chrome://remote/content/marionette/sync.js:224:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+1642355592187	geckodriver	INFO	Listening on 127.0.0.1:54705
+1642355594210	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54706" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilegunqXb"
+1642355594605	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilegunqXb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54706/devtools/browser/2a959875-6930-47fa-80a2-fbbb1c867a00
+1642355597432	Marionette	INFO	Listening on port 54711
+1642355597553	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1642355755969	Marionette	INFO	Stopped listening on port 54711
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+"--marionette" "--remote-debugging-port" "54737" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofiles2hMRI"
+1642355600032	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofiles2hMRI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54737/devtools/browser/e3ed9069-c00f-4714-9db2-daa8f5cf64b1
+1642355602788	Marionette	INFO	Listening on port 54751
+1642355602863	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript error: https://www.flashscore.com.ua/, line 125: TypeError: e.target.parentNode is null
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 664, MediaDecoderStateMachine #1] WARNING: 2b7f8320ba0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 664, MediaDecoderStateMachine #1] WARNING: 2b7f82a1820 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 664, MediaDecoderStateMachine #1] WARNING: 2b7f6888900 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 664, MediaDecoderStateMachine #2] WARNING: 2b7f69dee40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 664, MediaDecoderStateMachine #2] WARNING: 2b7f6888900 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 664, MediaDecoderStateMachine #2] WARNING: 2b7f83209e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1642355754900	Marionette	INFO	Stopped listening on port 54751
+1656083196036	geckodriver	INFO	Listening on 127.0.0.1:55918
+1656083198054	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55919" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile63qJfK"
+1656083199419	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:55919
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile63qJfK\\search.json.mozlz4", (void 0)))
+1656083202372	Marionette	INFO	Listening on port 55924
+1656083202408	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:55919/devtools/browser/ae41377a-9578-4f9b-981f-0a5620ab9287
+1656083236855	Marionette	INFO	Stopped listening on port 55924
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
