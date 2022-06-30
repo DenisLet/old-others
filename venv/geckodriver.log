@@ -1,0 +1,429 @@
+1639911302721	geckodriver	INFO	Listening on 127.0.0.1:62070
+1639911304768	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62071" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileWebIqS"
+1639911306160	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileWebIqS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62071/devtools/browser/ec032a66-c5e7-45f0-a4e1-a44c9b3268e1
+1639911309523	Marionette	INFO	Listening on port 62076
+1639911309849	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639911330793	Marionette	INFO	Stopped listening on port 62076
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1639911382343	geckodriver	INFO	Listening on 127.0.0.1:62163
+1639911384441	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62164" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilexcRGxO"
+1639911386139	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilexcRGxO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62164/devtools/browser/1ef5b36e-026d-4118-894c-27cbffda9b8e
+1639911390387	Marionette	INFO	Listening on port 62169
+1639911390666	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 860, MediaDecoderStateMachine #1] WARNING: 26179387ba0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 860, MediaDecoderStateMachine #1] WARNING: 26172834660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 860, MediaDecoderStateMachine #2] WARNING: 26173de3e40 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 860, MediaDecoderStateMachine #2] WARNING: 2616d794040 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639911708701	Marionette	INFO	Stopped listening on port 62169
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofilexcRGxO\protections.sqlite
+emp\\rust_mozprofilecCtjXO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62280/devtools/browser/d92b0bc4-cf31-43e5-80cb-f3c0d408f8ed
+1639911692975	Marionette	INFO	Listening on port 62285
+1639911693513	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639911699889	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 920, MediaDecoderStateMachine #1] WARNING: 250aa7b2d60 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 920, MediaDecoderStateMachine #1] WARNING: 250aa8fb2e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639911789064	Marionette	INFO	Stopped listening on port 62285
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofilecCtjXO\protections.sqlite
+ttings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileSVdpkF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62372/devtools/browser/739011f9-889c-4a9c-b1be-835d96ac9e65
+1639911766135	Marionette	INFO	Listening on port 62377
+1639911766190	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639911772345	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639911788836	Marionette	INFO	Stopped listening on port 62377
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofileSVdpkF\protections.sqlite
+1639912125085	geckodriver	INFO	Listening on 127.0.0.1:62467
+1639912127144	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62468" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileM9gEzk"
+1639912127570	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileM9gEzk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62468/devtools/browser/3dc1ee6e-7d10-4ab2-ae10-13f9b0acb31c
+1639912131004	Marionette	INFO	Listening on port 62473
+1639912131161	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 10640, MediaDecoderStateMachine #1] WARNING: 218381be900 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #1] WARNING: 2182c695040 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #2] WARNING: 21831458660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #2] WARNING: 21831458660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #3] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #3] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[Child 10640, MediaDecoderStateMachine #3] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+JavaScript error: , line 0: NotSupportedError: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+[Child 10640, MediaDecoderStateMachine #4] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #5] WARNING: 21831458820 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #5] WARNING: 21831458820 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #5] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #6] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #7] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #8] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #9] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #9] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #9] WARNING: 21831458740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #9] WARNING: 21831458ac0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #9] WARNING: 21831458ac0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10640, MediaDecoderStateMachine #9] WARNING: 21831458ac0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639913691026	Marionette	INFO	Stopped listening on port 62473
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+RER.
+[Child 5016, MediaDecoderStateMachine #1] WARNING: 2c187290580 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 5016, MediaDecoderStateMachine #1] WARNING: 2c188b7f3c0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 5016, MediaDecoderStateMachine #1] WARNING: 2c1872902e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 5016, MediaDecoderStateMachine #1] WARNING: 2c1872902e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639913691685	Marionette	INFO	Stopped listening on port 62655
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofileaS7lJR\protections.sqlite
+eComp\\AppData\\Local\\Temp\\rust_mozprofileN1cdJl"
+1639913686305	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileN1cdJl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62736/devtools/browser/86656e5e-c3a8-4944-8ad2-800f94d9684d
+1639913691726	Marionette	INFO	Listening on port 62741
+1639913691807	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 8092, MediaDecoderStateMachine #1] WARNING: 1e6efcd8200 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639913841839	Marionette	INFO	Stopped listening on port 62741
+1639913948386	geckodriver	INFO	Listening on 127.0.0.1:62839
+1639913950418	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62840" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilefbQ7KE"
+1639913951596	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofilefbQ7KE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62840/devtools/browser/eb70e30c-f659-4587-90f9-0fbdc305b306
+1639913953990	Marionette	INFO	Listening on port 62845
+1639913954334	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 10716, MediaDecoderStateMachine #1] WARNING: 1a71312c2e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 10716, MediaDecoderStateMachine #2] WARNING: 1a711c80200 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639914754895	Marionette	INFO	Stopped listening on port 62845
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+"--marionette" "--remote-debugging-port" "62961" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile9ALact"
+1639914744811	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile9ALact\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62961/devtools/browser/ddc471da-3999-41bc-bba4-907a632194f4
+1639914747609	Marionette	INFO	Listening on port 62966
+1639914747977	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639914755232	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 9608, MediaDecoderStateMachine #1] WARNING: 1c39bfc4660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 9608, MediaDecoderStateMachine #1] WARNING: 1c395f8bf20 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 9608, MediaDecoderStateMachine #2] WARNING: 1c39ad97900 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 9608, MediaDecoderStateMachine #3] WARNING: 1c39ad97740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639914993649	Marionette	INFO	Stopped listening on port 62966
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofile9ALact\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+r this session
+1639914813105	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 6796, MediaDecoderStateMachine #1] WARNING: 213b67674a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 6796, MediaDecoderStateMachine #2] WARNING: 213b4cdcc80 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639914994601	Marionette	INFO	Stopped listening on port 63050
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofi
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+leiRLMFL\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639914995531	Marionette	INFO	Stopped listening on port 63141
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofilelgB6RC\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunDevTools listening on ws://localhost:63217/devtools/browser/2b5dd8e9-03df-41de-b46a-1e799be38c8d
+1639914996208	Marionette	INFO	Listening on port 63222
+1639914996265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 9404, MediaDecoderStateMachine #1] WARNING: 22d26f9d820 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 9404, MediaDecoderStateMachine #1] WARNING: 22d2a4164a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639915140296	Marionette	INFO	Stopped listening on port 63222
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofile54RME6\protections.sqlite
+15132411	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileSX18Lw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63312/devtools/browser/5212c88f-69ce-41e9-87f8-60026b2a3c31
+1639915135897	Marionette	INFO	Listening on port 63317
+1639915136411	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 5820, MediaDecoderStateMachine #1] WARNING: 1c73c67f740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639915197873	Marionette	INFO	Stopped listening on port 63317
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofileSX18Lw\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+1639915342710	geckodriver	INFO	Listening on 127.0.0.1:63452
+1639915344748	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63453" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile95enzw"
+1639915345110	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofile95enzw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63453/devtools/browser/53b7db7b-dd97-423b-aacb-326b2d95b61c
+1639915347832	Marionette	INFO	Listening on port 63458
+1639915348019	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://mc.yandex.ru/metrika/tag.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 11884, MediaDecoderStateMachine #1] WARNING: 2735c77b740 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+[Child 11884, MediaDecoderStateMachine #2] WARNING: 2735c77bac0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639915637161	Marionette	INFO	Stopped listening on port 63458
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileHPzJYm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63652/devtools/browser/ecc0d6f4-51df-4528-a4d3-4750e29c26b1
+1639915509411	Marionette	INFO	Listening on port 63657
+1639915509629	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639915515112	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 8420, MediaDecoderStateMachine #1] WARNING: 1fc539ae900 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639915633631	Marionette	INFO	Stopped listening on port 63657
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofileHPzJYm\protections.sqlite
+emp\\rust_mozprofileB2lv8t\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63733/devtools/browser/a2845bd2-89b7-4146-9b0b-8937f994f300
+1639915570583	Marionette	INFO	Listening on port 63738
+1639915570760	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639915576927	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639915634762	Marionette	INFO	Stopped listening on port 63738
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofileB2lv8t\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessag1639915636174	Marionette	INFO	Stopped listening on port 63818
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6A0023,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\HomeComp\AppData\Local\Temp\rust_mozprofileyzxS06\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639917829994	geckodriver	INFO	Listening on 127.0.0.1:64000
+1639917832050	mozrunner::runner	INFO	Running command: "C:\\Users\\HomeComp\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64001" "-no-remote" "-profile" "C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileSbvbn4"
+1639917833042	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HomeComp\\AppData\\Local\\Temp\\rust_mozprofileSbvbn4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64001/devtools/browser/640c0b2b-51c9-4779-a17a-ffd29e012360
+1639917836788	Marionette	INFO	Listening on port 64006
+1639917837058	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.ftd.agency/libs/e.js, line 47: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[Child 8452, MediaDecoderStateMachine #1] WARNING: 295411fd660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1639917867593	Marionette	INFO	Stopped listening on port 64006
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

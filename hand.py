@@ -2,8 +2,9 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/team/ionikos/vXSZ7s56/{}".format("results/")
+link = "https://www.handball24.com/team/fuchse-berlin/2JspUjT7/{}".format("results/")
 team = link.split("/")[4].split("-")
+team_name_clear = ""
 try:
     browser = webdriver.Chrome()
     browser.get(link)
@@ -18,9 +19,13 @@ try:
         match_list.append(i.text)
     for game in match_list:
         line = game.split()
+        for j in line:
+            if team[0].capitalize() in j:                                # get team name for searching
+                team_name_clear = j
+                break
         if len(line) < 8:
             continue
-        if line[line.index("{}".format(team[0].capitalize()))+1].isdigit():
+        if line[line.index("{}".format(team_name_clear))+1].isdigit():
             away_matches.append(line)
         else:
             home_matches.append(line)
