@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/team/fuchse-berlin/2JspUjT7/{}".format("results/")
+link = "https://www.handball24.com/team/hbw-balingen-weilstetten/OKOqkVsl/{}".format("results/")
 team = link.split("/")[4].split("-")
 team_name_clear = ""
 try:
@@ -19,17 +19,19 @@ try:
         match_list.append(i.text)
     for game in match_list:
         line = game.split()
+        print(line)
         for j in line:
-            if team[0].capitalize() in j:                                # get team name for searching
+            if team[0].capitalize() in j or team[0].upper() in j :                          # get team name for searching
                 team_name_clear = j
                 break
-        if len(line) < 8:
+        print(team_name_clear)
+        if len(line) < 8:                                                                   # delete cancelled matches
             continue
-        if line[line.index("{}".format(team_name_clear))+1].isdigit():
-            away_matches.append(line)
-        else:
+        if line.index(team_name_clear) == 1 or (line.index(team_name_clear) == 2 and line[1].isalpha() == False) :      # separate home/away
             home_matches.append(line)
-    home_first_half,home_second_half,away_second_half,away_first_half = [],[],[],[] # total halfs Home/Away Scored
+        else:
+            away_matches.append(line)
+    home_first_half,home_second_half,away_second_half,away_first_half = [],[],[],[]       # total halfs Home/Away Scored
     ft_home,ft_away = [],[]
     home_first_half_conceded,home_second_half_conceded,away_first_half_conceded,away_second_half_conceded=[],[],[],[]
     ft_home_conceded,ft_away_conceded = [],[]
@@ -39,6 +41,7 @@ try:
         home_second_half.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half)):
         ft_home.append(int(home_first_half[i])+int(home_second_half[i]))
+    print("*******************************************************************************")
     for i in away_matches:
         print(i)
         away_first_half.append(int([j for j in i if j.isdigit()][3]))
