@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/team/hbw-balingen-weilstetten/OKOqkVsl/{}".format("results/")
+link = "https://www.handball24.com/team/flensburg-h/G6mqiEzL/{}".format("results/")
 team = link.split("/")[4].split("-")
 team_name_clear = ""
 try:
@@ -27,7 +27,9 @@ try:
         print(team_name_clear)
         if len(line) < 8:                                                                   # delete cancelled matches
             continue
-        if line.index(team_name_clear) == 1 or (line.index(team_name_clear) == 2 and line[1].isalpha() == False) :      # separate home/away
+        if  line.index(team_name_clear) == 1 :      # separate home/away
+            home_matches.append(line)
+        elif ":" in line[1] and line.index(team_name_clear) == 2:
             home_matches.append(line)
         else:
             away_matches.append(line)
