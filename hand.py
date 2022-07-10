@@ -23,7 +23,6 @@ try:
             if team[0].capitalize() in j or team[0].upper() in j :                          # get team name for searching
                 team_name_clear = j
                 break
-        print(team_name_clear)
         if len(line) < 8:                                                                   # delete cancelled matches
             continue
         if  line.index(team_name_clear) == 1 :      # separate home/away
@@ -32,8 +31,10 @@ try:
             home_matches.append(line)
         else:
             away_matches.append(line)
+    print(team_name_clear)
     home_first_half,home_second_half,away_second_half,away_first_half = [],[],[],[]       # total halfs Home/Away Scored
     ft_home,ft_away = [],[]
+
     home_first_half_conceded,home_second_half_conceded,away_first_half_conceded,away_second_half_conceded=[],[],[],[]
     ft_home_conceded,ft_away_conceded = [],[]
     for i in home_matches:                                                          # Scored start
