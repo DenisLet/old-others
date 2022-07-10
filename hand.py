@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/team/hungary/ppNAv94f{}".format("/results/")
+link = "https://www.handball24.com/team/faroe-islands/hMGYw0wR{}".format("/results/")
 team = link.split("/")[4].split("-")
 team_name_clear = ""
 try:
@@ -27,7 +27,7 @@ try:
             continue
         if  line.index(team_name_clear) == 1 :      # separate home/away
             home_matches.append(line)
-        elif ":" in line[1] and line.index(team_name_clear) == 2:
+        elif (":" in line[1] or line[1]=="AET") and line.index(team_name_clear) == 2:
             home_matches.append(line)
         else:
             away_matches.append(line)
