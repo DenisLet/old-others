@@ -19,7 +19,6 @@ try:
         match_list.append(i.text)
     for game in match_list:
         line = game.split()
-        print(line)
         for j in line:
             if team[0].capitalize() in j or team[0].upper() in j :                          # get team name for searching
                 team_name_clear = j
@@ -63,19 +62,19 @@ try:
     print("+"*30,"SCORED HOME","+"*30)
     print("1ST HALF:",sorted(home_first_half))
     print("2ND HALF:",sorted(home_second_half))
-    print("FH :",sorted(ft_home))
+    print("FT :",sorted(ft_home))
     print("+"*30,"SCORED AWAY","+"*30)
     print("1ST HALF:",sorted(away_first_half))
     print("2ND HALF:",sorted(away_second_half))
-    print("FH :",sorted(ft_away))
+    print("FT :",sorted(ft_away))
     print("-"*30,"CONCEDED HOME","-"*30)
     print("1ST HALF:",sorted(home_first_half_conceded))
     print("2ND HALF:",sorted(home_second_half_conceded))
-    print("FH :",sorted(ft_home_conceded))
+    print("FT :",sorted(ft_home_conceded))
     print("-"*30,"CONCEDED AWAY","-"*30)
     print("1ST HALF:",sorted(away_first_half_conceded))
     print("2ND HALF:",sorted(away_second_half_conceded))
-    print("FH :",sorted(ft_away_conceded))
+    print("FT :",sorted(ft_away_conceded))
 
 finally:
     time.sleep(20)
