@@ -38,7 +38,7 @@ try:
             continue
         if  line.index(team_name_clear) == 1 :      # separate home/away
             home_matches.append(line)
-        elif ":" in line[1] and line.index(team_name_clear) == 2:
+        elif (":" in line[1] or line[1]=="AET") and line.index(team_name_clear) == 2:
             home_matches.append(line)
         else:
             away_matches.append(line)
@@ -49,14 +49,14 @@ try:
     home_first_half_conceded_ht, home_second_half_conceded_ht, away_first_half_conceded_ht, away_second_half_conceded_ht= [], [], [], []
     ft_home_conceded_ht, ft_away_conceded_ht = [], []
     for i in home_matches:                                                          # Scored start
-        print(i)
+        # print(i)
         home_first_half_ht.append(int([j for j in i if j.isdigit()][2]))
         home_second_half_ht.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half_ht)):
         ft_home_ht.append(int(home_first_half_ht[i]) + int(home_second_half_ht[i]))
     print("*******************************************************************************")
     for i in away_matches:
-        print(i)
+        # print(i)
         away_first_half_ht.append(int([j for j in i if j.isdigit()][3]))
         away_second_half_ht.append(int([j for j in i if j.isdigit()][5]))
     for i in range(len(away_first_half_ht)):
@@ -117,7 +117,7 @@ try:
             continue
         if  line.index(team_name_clear) == 1 :      # separate home/away
             home_matches.append(line)
-        elif ":" in line[1] and line.index(team_name_clear) == 2:
+        elif (":" in line[1] or line[1]=="AET") and line.index(team_name_clear) == 2:
             home_matches.append(line)
         else:
             away_matches.append(line)
@@ -128,14 +128,14 @@ try:
     home_first_half_conceded_at, home_second_half_conceded_at, away_first_half_conceded_at, away_second_half_conceded_at= [], [], [], []
     ft_home_conceded_at, ft_away_conceded_at = [], []
     for i in home_matches:                                                          # Scored start
-        print(i)
+        # print(i)
         home_first_half_at.append(int([j for j in i if j.isdigit()][2]))
         home_second_half_at.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half_at)):
         ft_home_at.append(int(home_first_half_at[i]) + int(home_second_half_at[i]))
     print("*******************************************************************************")
     for i in away_matches:
-        print(i)
+        # print(i)
         away_first_half_at.append(int([j for j in i if j.isdigit()][3]))
         away_second_half_at.append(int([j for j in i if j.isdigit()][5]))
     for i in range(len(away_first_half_at)):
