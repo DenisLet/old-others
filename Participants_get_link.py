@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/match/CMEWYGjD/#/match-summary/match-summary"
+link = "https://www.handball24.com/match/2XWGwLXL/#/match-summary/match-summary"
 try:
     browser = webdriver.Chrome()
     browser.get(link)
@@ -19,8 +19,8 @@ team_name_clear = ""
 try:
     browser = webdriver.Chrome()
     browser.get(link)
-    time.sleep(1)
-    browser.find_element(By.ID,"onetrust-reject-all-handler").click()
+    # time.sleep(1)
+    # browser.find_element(By.ID,"onetrust-reject-all-handler").click()
     matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_7']")
     match_list,home_matches,away_matches = [],[],[]
     print(team[0].capitalize())
@@ -54,7 +54,7 @@ try:
         home_second_half_ht.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half_ht)):
         ft_home_ht.append(int(home_first_half_ht[i]) + int(home_second_half_ht[i]))
-    print("*******************************************************************************")
+    # print("*******************************************************************************")
     for i in away_matches:
         # print(i)
         away_first_half_ht.append(int([j for j in i if j.isdigit()][3]))
@@ -88,8 +88,9 @@ try:
     print("2ND HALF:", sorted(away_second_half_conceded_ht))
     print("FT :", sorted(ft_away_conceded_ht))
 finally:
-    time.sleep(3)
+    time.sleep(2)
     browser.quit()
+print()
 print("A++++++++++++++++++W+++++++++++++++++++++++++++A+++++++++++++++++++++++++++++Y")
 ###################################################################
 link = "{}/results/".format(Participants.away_link)
@@ -98,8 +99,8 @@ team_name_clear = ""
 try:
     browser = webdriver.Chrome()
     browser.get(link)
-    time.sleep(1)
-    browser.find_element(By.ID,"onetrust-reject-all-handler").click()
+    # time.sleep(1)
+    # browser.find_element(By.ID,"onetrust-reject-all-handler").click()
     matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_7']")
     match_list,home_matches,away_matches = [],[],[]
     print(team[0].capitalize())
@@ -133,7 +134,7 @@ try:
         home_second_half_at.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half_at)):
         ft_home_at.append(int(home_first_half_at[i]) + int(home_second_half_at[i]))
-    print("*******************************************************************************")
+    # print("*******************************************************************************")
     for i in away_matches:
         # print(i)
         away_first_half_at.append(int([j for j in i if j.isdigit()][3]))
@@ -167,5 +168,5 @@ try:
     print("2ND HALF:", sorted(away_second_half_conceded_at))
     print("FT :", sorted(ft_away_conceded_at))
 finally:
-    time.sleep(3)
+    time.sleep(2)
     browser.quit()

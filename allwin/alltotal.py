@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-year = 2020
-url = "https://24score.pro/basketball/team/new_zealand/nelson_giants_(m)/{}".format(year)
+from neoo import a
+year = 2021
+url = "{}{}".format(a,year)
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
 scores=soup.select("#data_container div.data10_home td.score")
@@ -34,9 +35,6 @@ for score in scores:
     if home1+away1 > totals or home2+away2 > totals or home3+away3 > totals or home4+away4 > totals:
         print("M---O---R---E")
         more+=1
-
-
-
     count += 1
 print()
 print("_______________AWAY__________________")

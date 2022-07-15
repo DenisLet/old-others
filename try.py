@@ -1,7 +1,9 @@
-link = "https://www.handball24.com/team/hungary/ppNAv94f{}".format("/results/")
-from hand import match_list as ml
-def naming(link,match_list):
-    team = link.split("/")[4].split("-")
-
-
-
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+link = "https://www.handball24.com/team/iceland/OdLMxcTM{}".format("/results/")
+browser = webdriver.Chrome()
+browser.get(link)
+link = "https://www.handball24.com/team/bergischer/UJnQvkWb/"
+browser.get(link)
