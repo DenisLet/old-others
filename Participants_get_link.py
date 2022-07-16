@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/match/2XWGwLXL/#/match-summary/match-summary"
+link = "https://www.handball24.com/match/ARmRkc4M/#/match-summary/match-summary"
 try:
     browser = webdriver.Chrome()
     browser.get(link)
