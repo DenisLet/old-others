@@ -90,23 +90,22 @@ try:
     print("FULL TIME: ", sorted(fulltime_home_ht))
     #######################################
     print("+"*30,"SCORED AWAY","+"*30)
-    print("1ST HALF:", (away_first_half_ht))
-    print("1 HALF BOTH: ",first_half_both_away_ht)
-    print("2ND HALF:", (away_second_half_ht))
-    print("2 HALF BOTH: ",second_half_both_away_ht)
-    print("FT :", (ft_away_ht))
-    print("FULL TIME: ", (fulltime_away_ht))
-
-
+    print("1ST HALF:", sorted(away_first_half_ht))
+    print("1 HALF BOTH: ",sorted(first_half_both_away_ht))
+    print("2ND HALF:", sorted(away_second_half_ht))
+    print("2 HALF BOTH: ",sorted(second_half_both_away_ht))
+    print("FT :", sorted(ft_away_ht))
+    print("FULL TIME: ", sorted(fulltime_away_ht))
+    #######################################
     print("-"*30,"CONCEDED HOME","-"*30)
-    print("1ST HALF:", (home_first_half_conceded_ht))
-    print("2ND HALF:", (home_second_half_conceded_ht))
-    print("FT :", (ft_home_conceded_ht))
+    print("1ST HALF:", sorted(home_first_half_conceded_ht))
+    print("2ND HALF:", sorted(home_second_half_conceded_ht))
+    print("FT :", sorted(ft_home_conceded_ht))
 
     print("-"*30,"CONCEDED AWAY","-"*30)
-    print("1ST HALF:", (away_first_half_conceded_ht))
-    print("2ND HALF:", (away_second_half_conceded_ht))
-    print("FT :", (ft_away_conceded_ht))
+    print("1ST HALF:", sorted(away_first_half_conceded_ht))
+    print("2ND HALF:", sorted(away_second_half_conceded_ht))
+    print("FT :", sorted(ft_away_conceded_ht))
 
     print()
     print("A++++++++++++++++++W+++++++++++++++++++++++++++A+++++++++++++++++++++++++++++Y")
