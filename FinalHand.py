@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-url = "https://www.handball24.com/match/ARmRkc4M/#/match-summary/match-summary"
+url = "https://www.handball24.com/match/x6Zs5QEI/#/match-summary/match-summary"
 try:
     browser = webdriver.Chrome()
     browser.get(url)
@@ -36,23 +36,26 @@ try:
             home_matches.append(line)
         elif (":" in line[1] or line[1]=="AET") and line.index(team_name_clear) == 2:
             home_matches.append(line)
+        elif line[2] == "AET" and line.index(team_name_clear) == 3:
+            home_matches.append(line)
         else:
             away_matches.append(line)
     home_first_half_ht, home_second_half_ht, away_second_half_ht, away_first_half_ht = [], [], [], []       # total halfs Home/Away Scored
     ft_home_ht, ft_away_ht = [], []
     handicap_home_first_half_ht,handicap_home_second_half_ht,handicap_home_fullfime_ht = [],[],[]
-
     home_first_half_conceded_ht, home_second_half_conceded_ht, away_first_half_conceded_ht, away_second_half_conceded_ht= [], [], [], []
     ft_home_conceded_ht, ft_away_conceded_ht = [], []
+
+
     for i in home_matches:                                                          # Scored start
-        # print(i)
+        print(i)
         home_first_half_ht.append(int([j for j in i if j.isdigit()][2]))
         home_second_half_ht.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half_ht)):
         ft_home_ht.append(int(home_first_half_ht[i]) + int(home_second_half_ht[i]))
     # print("*******************************************************************************")
     for i in away_matches:
-        # print(i)
+        print(i)
         away_first_half_ht.append(int([j for j in i if j.isdigit()][3]))
         away_second_half_ht.append(int([j for j in i if j.isdigit()][5]))
     for i in range(len(away_first_half_ht)):
@@ -67,22 +70,29 @@ try:
         away_second_half_conceded_ht.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(away_second_half_conceded_ht)):
         ft_away_conceded_ht.append(int(away_first_half_conceded_ht[i]) + int(away_second_half_conceded_ht[i]))
+
+    first_half_both = [x + y for x, y in zip(home_first_half_ht, home_first_half_conceded_ht)]
+    second_half_both = [x + y for x, y in zip(home_second_half_ht,home_second_half_conceded_ht)]
+    fulltime = [x + y for x, y in zip(first_half_both,second_half_both)]
     print("+"*30,"SCORED HOME","+"*30)
     print("1ST HALF:", sorted(home_first_half_ht))
     print("2ND HALF:", sorted(home_second_half_ht))
-    print("FT :", sorted(ft_home_ht))
+    print("FT:", sorted(ft_home_ht))
+    print("1 HALF BOTH: ", sorted(first_half_both))
+    print("2 HALF BOTH: ", sorted(second_half_both))
+    print("FULL TIME: ", sorted(fulltime))
     print("+"*30,"SCORED AWAY","+"*30)
-    print("1ST HALF:", sorted(away_first_half_ht))
-    print("2ND HALF:", sorted(away_second_half_ht))
-    print("FT :", sorted(ft_away_ht))
+    print("1ST HALF:", (away_first_half_ht))
+    print("2ND HALF:", (away_second_half_ht))
+    print("FT :", (ft_away_ht))
     print("-"*30,"CONCEDED HOME","-"*30)
-    print("1ST HALF:", sorted(home_first_half_conceded_ht))
-    print("2ND HALF:", sorted(home_second_half_conceded_ht))
-    print("FT :", sorted(ft_home_conceded_ht))
+    print("1ST HALF:", (home_first_half_conceded_ht))
+    print("2ND HALF:", (home_second_half_conceded_ht))
+    print("FT :", (ft_home_conceded_ht))
     print("-"*30,"CONCEDED AWAY","-"*30)
-    print("1ST HALF:", sorted(away_first_half_conceded_ht))
-    print("2ND HALF:", sorted(away_second_half_conceded_ht))
-    print("FT :", sorted(ft_away_conceded_ht))
+    print("1ST HALF:", (away_first_half_conceded_ht))
+    print("2ND HALF:", (away_second_half_conceded_ht))
+    print("FT :", (ft_away_conceded_ht))
 
     print()
     print("A++++++++++++++++++W+++++++++++++++++++++++++++A+++++++++++++++++++++++++++++Y")
@@ -119,14 +129,14 @@ try:
     home_first_half_conceded_at, home_second_half_conceded_at, away_first_half_conceded_at, away_second_half_conceded_at= [], [], [], []
     ft_home_conceded_at, ft_away_conceded_at = [], []
     for i in home_matches:                                                          # Scored start
-        # print(i)
+        print(i)
         home_first_half_at.append(int([j for j in i if j.isdigit()][2]))
         home_second_half_at.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(home_second_half_at)):
         ft_home_at.append(int(home_first_half_at[i]) + int(home_second_half_at[i]))
     # print("*******************************************************************************")
     for i in away_matches:
-        # print(i)
+        print(i)
         away_first_half_at.append(int([j for j in i if j.isdigit()][3]))
         away_second_half_at.append(int([j for j in i if j.isdigit()][5]))
     for i in range(len(away_first_half_at)):

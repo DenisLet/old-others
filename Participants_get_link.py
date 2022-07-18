@@ -75,6 +75,7 @@ try:
     print("1ST HALF:", sorted(home_first_half_ht))
     print("2ND HALF:", sorted(home_second_half_ht))
     print("FT :", sorted(ft_home_ht))
+    print("HT BOTH: ",)
     print("+"*30,"SCORED AWAY","+"*30)
     print("1ST HALF:", sorted(away_first_half_ht))
     print("2ND HALF:", sorted(away_second_half_ht))
