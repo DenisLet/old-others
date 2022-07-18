@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-from neoo import a
-year = 2021
-url = "{}{}".format(a,year)
+
+year = 2022
+url = "https://24score.pro/basketball/team/new_zealand/canterbury_rams_(m)/{}".format(year)
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
 scores=soup.select("#data_container div.data10_home td.score")
@@ -13,8 +13,8 @@ totalHome,totalAway=[],[]
 totals = int(input("Total: "))
 totalmatch=[]
 count=0
-more = 0
-less = 0
+moreAll = 0
+lessAll = 0
 for score in scores:
     if "— —" in score.text or "Отложен" in score.text or "тех. пор." in score.text:
         continue
@@ -34,7 +34,7 @@ for score in scores:
     print(xline)
     if home1+away1 > totals or home2+away2 > totals or home3+away3 > totals or home4+away4 > totals:
         print("M---O---R---E")
-        more+=1
+        moreAll+=1
     count += 1
 print()
 print("_______________AWAY__________________")
@@ -60,7 +60,7 @@ for score in scores:
     print(xline)
     if home1+away1 > totals or home2+away2 > totals or home3+away3 > totals or home4+away4 > totals:
         print("M---O---R---E")
-        more+=1
+        moreAll+=1
     # if home1 >= away1 and home2 >= away2 and home3 >= away3 and home4 >= away4:
     #     alllose+=1
     #     print("L----O----S----E   A----L----L")
@@ -92,7 +92,7 @@ homeScore1.sort(),homeScore2.sort(),homeScore3.sort(),homeScore4.sort()
 awayScore1.sort(),awayScore2.sort(),awayScore3.sort(),awayScore4.sort()
 totalHome.sort()
 totalAway.sort(),totalmatch.sort()
-print(count,"More Then",more    )
+print(count,"More Then",moreAll    )
 
 
 
