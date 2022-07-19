@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-url = "https://www.handball24.com/match/Ay5eKdKM/#/match-summary"
+url = "https://www.handball24.com/match/rXPHgmGQ/#/match-summary"
 try:
     browser = webdriver.Chrome()
     browser.get(url)
@@ -176,20 +176,20 @@ try:
 
 
     print("+"*30,"SCORED HOME","+"*30)
-    print("1ST HALF:", (home_first_half_at))
-    print("1 HALF BOTH: ", (first_half_both_home_at))
-    print("2ND HALF:", (home_second_half_at))
-    print("2 HALF BOTH: ", (second_half_both_home_at))
-    print("FT:", (ft_home_at))
-    print("FULL TIME: ", (fulltime_home_at))
+    print("1ST HALF:", sorted(home_first_half_at))
+    print("1 HALF BOTH: ", sorted(first_half_both_home_at))
+    print("2ND HALF:", sorted(home_second_half_at))
+    print("2 HALF BOTH: ", sorted(second_half_both_home_at))
+    print("FT:", sorted(ft_home_at))
+    print("FULL TIME: ", sorted(fulltime_home_at))
     #######################################
     print("+"*30,"SCORED AWAY","+"*30)
-    print("1ST HALF:", (away_first_half_at))
-    print("1 HALF BOTH: ",(first_half_both_away_at))
-    print("2ND HALF:", (away_second_half_at))
-    print("2 HALF BOTH: ",(second_half_both_away_at))
-    print("FT :", (ft_away_at))
-    print("FULL TIME: ", (fulltime_away_at))
+    print("1ST HALF:", sorted(away_first_half_at))
+    print("1 HALF BOTH: ",sorted(first_half_both_away_at))
+    print("2ND HALF:", sorted(away_second_half_at))
+    print("2 HALF BOTH: ",sorted(second_half_both_away_at))
+    print("FT :", sorted(ft_away_at))
+    print("FULL TIME: ", sorted(fulltime_away_at))
     #######################################
     print("-"*30,"CONCEDED HOME","-"*30)
     print("1ST HALF:", sorted(home_first_half_conceded_at))

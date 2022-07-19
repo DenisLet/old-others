@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-link = "https://www.handball24.com/team/iceland/OdLMxcTM{}".format("/results/")
+link = "https://www.handball24.com/team/vive-kielce/C0B1zszf/{}".format("results/")
 team = link.split("/")[4].split("-")
 team_name_clear = ""
 try:
