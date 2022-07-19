@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-url = "https://www.handball24.com/match/WrRSyh7L/#/match-summary"
+url = "https://www.handball24.com/match/Ay5eKdKM/#/match-summary"
 try:
     browser = webdriver.Chrome()
     browser.get(url)
@@ -164,18 +164,38 @@ try:
         away_second_half_conceded_at.append(int([j for j in i if j.isdigit()][4]))
     for i in range(len(away_second_half_conceded_at)):
         ft_away_conceded_at.append(int(away_first_half_conceded_at[i]) + int(away_second_half_conceded_at[i]))
+
+    first_half_both_home_at = [x + y for x, y in zip(home_first_half_at, home_first_half_conceded_at)]
+    second_half_both_home_at = [x + y for x, y in zip(home_second_half_at,home_second_half_conceded_at)]
+    fulltime_home_at = [x + y for x, y in zip(first_half_both_home_at,second_half_both_home_at)]
+    ### AWAY Scored home
+    first_half_both_away_at = [x + y for x, y in zip(away_first_half_at,away_first_half_conceded_at)]
+    second_half_both_away_at = [x + y for x, y in zip(away_second_half_at,away_second_half_conceded_at)]
+    fulltime_away_at = [x + y for x, y in zip(first_half_both_away_at,second_half_both_away_at)]
+    ### AWAY Scored away
+
+
     print("+"*30,"SCORED HOME","+"*30)
-    print("1ST HALF:", sorted(home_first_half_at))
-    print("2ND HALF:", sorted(home_second_half_at))
-    print("FT :", sorted(ft_home_at))
+    print("1ST HALF:", (home_first_half_at))
+    print("1 HALF BOTH: ", (first_half_both_home_at))
+    print("2ND HALF:", (home_second_half_at))
+    print("2 HALF BOTH: ", (second_half_both_home_at))
+    print("FT:", (ft_home_at))
+    print("FULL TIME: ", (fulltime_home_at))
+    #######################################
     print("+"*30,"SCORED AWAY","+"*30)
-    print("1ST HALF:", sorted(away_first_half_at))
-    print("2ND HALF:", sorted(away_second_half_at))
-    print("FT :", sorted(ft_away_at))
+    print("1ST HALF:", (away_first_half_at))
+    print("1 HALF BOTH: ",(first_half_both_away_at))
+    print("2ND HALF:", (away_second_half_at))
+    print("2 HALF BOTH: ",(second_half_both_away_at))
+    print("FT :", (ft_away_at))
+    print("FULL TIME: ", (fulltime_away_at))
+    #######################################
     print("-"*30,"CONCEDED HOME","-"*30)
     print("1ST HALF:", sorted(home_first_half_conceded_at))
     print("2ND HALF:", sorted(home_second_half_conceded_at))
     print("FT :", sorted(ft_home_conceded_at))
+
     print("-"*30,"CONCEDED AWAY","-"*30)
     print("1ST HALF:", sorted(away_first_half_conceded_at))
     print("2ND HALF:", sorted(away_second_half_conceded_at))
