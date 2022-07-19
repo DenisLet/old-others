@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 year = 2022
-url = "https://24score.pro/basketball/team/new_zealand/canterbury_rams_(m)/{}".format(year)
+url = "https://24score.pro/basketball/team/usa/connecticut_(f)/{}".format(year)
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
 scores=soup.select("#data_container div.data10_home td.score")
@@ -35,6 +35,9 @@ for score in scores:
     if home1+away1 > totals or home2+away2 > totals or home3+away3 > totals or home4+away4 > totals:
         print("M---O---R---E")
         moreAll+=1
+    if home1 + away1 <= totals or home2 + away2 <= totals or home3 + away3 <= totals or home4 + away4 <= totals:
+        lessAll+=1
+        print("L---E---S---S")
     count += 1
 print()
 print("_______________AWAY__________________")
@@ -61,6 +64,10 @@ for score in scores:
     if home1+away1 > totals or home2+away2 > totals or home3+away3 > totals or home4+away4 > totals:
         print("M---O---R---E")
         moreAll+=1
+
+    if home1 + away1 <= totals or home2 + away2 <= totals or home3 + away3 <= totals or home4 + away4 <= totals:
+        lessAll+=1
+        print("L---E---S---S")
     # if home1 >= away1 and home2 >= away2 and home3 >= away3 and home4 >= away4:
     #     alllose+=1
     #     print("L----O----S----E   A----L----L")
@@ -93,7 +100,7 @@ awayScore1.sort(),awayScore2.sort(),awayScore3.sort(),awayScore4.sort()
 totalHome.sort()
 totalAway.sort(),totalmatch.sort()
 print(count,"More Then",moreAll    )
-
+print(count,"Less Then", lessAll)
 
 
 
