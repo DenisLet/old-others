@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://24score.pro/basketball/"
+url = "https://24score.pro/basketball/?date=2022-07-24"
 year = input("Enter year: ")
 def get_matches(url):
     page = "https://24score.pro{}"
@@ -35,28 +35,30 @@ def get_scores(get_matches,totals,totalsAll):
         home2, away2 = int(secondQ.split(":")[0]), int(secondQ.split(":")[1])
         home3, away3 = int(thirdQ.split(":")[0]), int(thirdQ.split(":")[1])
         home4, away4 = int(fourthQ.split(":")[0]), int(fourthQ.split(":")[1])
-        print(xline)
+        # print(xline)
         if home1 >= away1 and home2 >= away2 and home3 >= away3:
             allwin3 += 1
-            print("W----I----N   A----L----L----3")
+            # print("W----I----N   A----L----L----3")
             if home4 >= away4:
-                print("W----I----N   A----L----L")
+                # print("W----I----N   A----L----L")
                 allwin += 1
         if home1 <= away1 and home2 <= away2 and home3 <= away3:
             alllose3 += 1
-            print("L----O----S----E   A----L----L----3")
+            # print("L----O----S----E   A----L----L----3")
             if home4 <= away4:
                 alllose += 1
-                print("L----O----S----E   A----L----L")
+                # print("L----O----S----E   A----L----L")
         if home1 > totals or home2 > totals or home3 > totals or home4 > totals:
-            print("M---O---R---E   I---N---D")
+            # print("M---O---R---E   I---N---D")
             more += 1
         if away1 > totals or away2 > totals or away3 > totals or away4 > totals:
             allow_to_score += 1
-            print("A---L---L---O---W   I---N---D")
+            # print("A---L---L---O---W   I---N---D")
         if home1 + away1 > totalsAll or home2 + away2 > totalsAll or home3 + away3 > totalsAll or home4 + away4 > totalsAll:
-            print("M---O---R---E")
+            # print("M---O---R---E")
             moreAll += 1
+        if home1 + away1 <= totalsAll or home2 + away2 <= totalsAll or home3 + away3 <= totalsAll or home4 + away4 <= totalsAll:
+            lessAll += 1
         count += 1
     for score in scores_away:
         if "— —" in score.text or "Отложен" in score.text or "тех. пор." in score.text:
@@ -68,33 +70,37 @@ def get_scores(get_matches,totals,totalsAll):
         home2, away2 = int(secondQ.split(":")[0]), int(secondQ.split(":")[1])
         home3, away3 = int(thirdQ.split(":")[0]), int(thirdQ.split(":")[1])
         home4, away4 = int(fourthQ.split(":")[0]), int(fourthQ.split(":")[1])
-        print(xline)
+        # print(xline)
         if home1 <= away1 and home2 <= away2 and home3 <= away3:
             allwin3 += 1
-            print("W----I----N   A----L----L----3")
+            # print("W----I----N   A----L----L----3")
             if home4 <= away4:
                 allwin += 1
-                print("W----I----N   A----L----L")
+                # print("W----I----N   A----L----L")
         if home1 >= away1 and home2 >= away2 and home3 >= away3 and home4 >= away4:
             alllose3 += 1
-            print("L----O----S----E   A----L----L----3")
+            # print("L----O----S----E   A----L----L----3")
             if home4 >= away4:
                 alllose += 1
-                print("L----O----S----E   A----L----L")
+                # print("L----O----S----E   A----L----L")
         if away1 > totals or away2 > totals or away3 > totals or away4 > totals:
             more += 1
-            print("M---O---R---E   I---N---D")
+            # print("M---O---R---E   I---N---D")
         if home1 > totals or home2 > totals or home3 > totals or home4 > totals:
             allow_to_score += 1
-            print("A---L---L---O---W   I---N---D")
+            # print("A---L---L---O---W   I---N---D")
         if home1 + away1 > totalsAll or home2 + away2 > totalsAll or home3 + away3 > totalsAll or home4 + away4 > totalsAll:
-            print("M---O---R---E")
+            # print("M---O---R---E")
             moreAll += 1
+        if home1 + away1 <= totalsAll or home2 + away2 <= totalsAll or home3 + away3 <= totalsAll or home4 + away4 <= totalsAll:
+            # print("LEss ALLLLLLL")
+            lessAll += 1
         count += 1
     print("For 4 Qwtrs: ", count, "WIN:", allwin, "LOSS:", alllose)
     print("For 3 Qwtrs: ", count, "WIN:", allwin3, "LOSS:", alllose3)
     print(count, "More Then (individual){}:".format(totals), more, "Allow: ", allow_to_score)
     print(count, "More Then both({}):".format(totalsAll), moreAll)
+    print(count ,"Less Then both({}):".format(totalsAll), lessAll)
 
 for i,j in get_matches(url).items():
     print(i.split("/")[6]+j.split("/")[6])

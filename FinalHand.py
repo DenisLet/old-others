@@ -2,7 +2,7 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-url = "https://www.handball24.com/match/rXPHgmGQ/#/match-summary"
+url = "https://www.handball24.com/match/KtyvNrkC/#/match-summary/match-summary"
 try:
     browser = webdriver.Chrome()
     browser.get(url)
@@ -45,7 +45,6 @@ try:
     handicap_home_first_half_ht,handicap_home_second_half_ht,handicap_home_fullfime_ht = [],[],[]
     home_first_half_conceded_ht, home_second_half_conceded_ht, away_first_half_conceded_ht, away_second_half_conceded_ht= [], [], [], []
     ft_home_conceded_ht, ft_away_conceded_ht = [], []
-
 
     for i in home_matches:                                                          # Scored start
         print(i)

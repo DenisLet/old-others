@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 year = 2022
-url = "https://24score.pro/basketball/team/usa/connecticut_(f)/{}".format(year)
+url = "https://24score.pro/basketball/team/new_zealand/southland_sharks_(m)/{}".format(year)
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
 scores=soup.select("#data_container div.data10_home td.score")
