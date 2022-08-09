@@ -1,9 +1,7 @@
 from playwright.sync_api import sync_playwright
 from collections import Counter
 from functools import reduce
-url = "https://www.soccer24.com/match/vHM6Muh9/#/match-summary/match-summary"
-
-
+url = "https://www.soccer24.com/match/OzVezghN/#/match-summary"
 def forming(page,link):                                    # NEED ADD TYPE SPORT AND FIXABLE CSS SELECTOR
     page.goto(link)
     matches = page.query_selector_all("[id^='g_1']")
@@ -15,7 +13,6 @@ def forming(page,link):                                    # NEED ADD TYPE SPORT
         if "(0)" in line or "(1)" in line or "(2)" in line:
             match_list.append(line.split())
     return match_list
-
 def first_half_results(matches,loc):
     team_scored = list()
     team_coceded = list()
@@ -31,7 +28,6 @@ def first_half_results(matches,loc):
         team_scored.append(int(scores[scored].replace("(", "").replace(")", "")))
         team_coceded.append(int(scores[conceded].replace("(", "").replace(")", "")))
     return team_scored,team_coceded                # 0 -scored 1 - conceded
-
 def separation_home_away(team_,all_matches):
     count = 0
     home_matches = list()
@@ -65,6 +61,18 @@ def team_name(list):
     return team
 def summery(scores):
     return [i for i in scores]
+def indication(list):
+    null,one,more,amount = 0,0,0,0
+    for i in list:
+        amount += 1
+        if i == 0:
+            null += 1
+        if i == 1:
+            one += 1
+        if i > 1:
+            more += 1
+    return null,one,more,amount
+
 def teams_stat(link):
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -82,17 +90,31 @@ def teams_stat(link):
         home_results = separation_home_away(home_name,forming(page,link_hometeam_results))     # 0 - home, 1 - away
         away_results = separation_home_away(away_name,forming(page,link_awayteam_resalts))
         print(home_name,away_name)
-        home_team_scores_list_at_home = summery(first_half_results(home_results[0],loc="home")[0])
+        home_team_scores_list_at_home = summery(first_half_results(home_results[0],  loc="home")[0])
         home_team_conceded_list_at_home = summery(first_half_results(home_results[0],loc="home")[1])
-        home_team_scores_list_away = summery(first_half_results(home_results[1],loc="away")[0])
-        away_team_scores_list_at_home = summery(first_half_results(away_results[0],loc="home")[0])
-        away_team_scores_list_away = summery(first_half_results(away_results[1],loc="away")[0])
-        print(home_team_scores_list_at_home)
-        print(home_team_conceded_list_at_home)
-        # print(home_team_scores_list_away)
-        # print(away_team_scores_list_at_home)
-        # print(away_team_scores_list_away)
+        home_team_scores_list_away = summery(first_half_results(home_results[1],     loc="away")[0])
+        home_team_conceded_list_away = summery(first_half_results(home_results[1],   loc="away")[1])
+        away_team_scores_list_at_home = summery(first_half_results(away_results[0],  loc="home")[0])
+        away_team_conceded_list_at_home = summery(first_half_results(away_results[0], loc="home")[1])
+        away_team_scores_list_away = summery(first_half_results(away_results[1],     loc="away")[0])
+        away_team_conceded_list_away = summery(first_half_results(away_results[1],    loc="away")[1])
 
+        print(f"{home_name}  scored at home (0-1-more-all): ",indication(home_team_scores_list_at_home))
+        print(home_team_scores_list_at_home)
+        print(f"{home_name}  conceded at home (0-1-more-all): ",indication(home_team_conceded_list_at_home))
+        print(home_team_conceded_list_at_home)
+        print(f"{home_name}  scored as visitors (0-1-more-all): ",indication(home_team_scores_list_away))
+        print(home_team_scores_list_away)
+        print(f"{home_name}  conceded as visitors (0-1-more-all): ",indication(home_team_conceded_list_away))
+        print("_________________AWAY__________________")
+        print(f"{away_name}  scored at home (0-1-more-all): ",indication(away_team_conceded_list_at_home))
+        print(away_team_conceded_list_at_home)
+        print(f"{away_name}  conceded at home (0-1-more-all): ",indication(away_team_conceded_list_at_home))
+        print(away_team_conceded_list_at_home)
+        print(f"{away_name}  scored as visitors (0-1-more-all): ",indication(away_team_scores_list_away))
+        print(away_team_scores_list_away)
+        print(f"{away_name}  conceded as visitors (0-1-more-all): ",indication(away_team_conceded_list_away))
+        print(away_team_conceded_list_away)
 teams_stat(url)
 
 
