@@ -1,17 +1,21 @@
 from playwright.sync_api import sync_playwright
 from collections import Counter
 from functools import reduce
-url = "https://www.soccer24.com/match/OzVezghN/#/match-summary"
+import time
+start = time.time()
+url = "https://www.soccer24.com/match/rLor0PlM/#/match-summary"
 def forming(page,link):                                    # NEED ADD TYPE SPORT AND FIXABLE CSS SELECTOR
     page.goto(link)
     matches = page.query_selector_all("[id^='g_1']")
     match_list = list()
+    print(matches)
     for i in matches:
         line = i.inner_text()
         if "Awrd" in line:
             continue
         if "(0)" in line or "(1)" in line or "(2)" in line:
             match_list.append(line.split())
+
     return match_list
 def first_half_results(matches,loc):
     team_scored = list()
@@ -106,9 +110,10 @@ def teams_stat(link):
         print(f"{home_name}  scored as visitors (0-1-more-all): ",indication(home_team_scores_list_away))
         print(home_team_scores_list_away)
         print(f"{home_name}  conceded as visitors (0-1-more-all): ",indication(home_team_conceded_list_away))
+        print(home_team_conceded_list_away)
         print("_________________AWAY__________________")
-        print(f"{away_name}  scored at home (0-1-more-all): ",indication(away_team_conceded_list_at_home))
-        print(away_team_conceded_list_at_home)
+        print(f"{away_name}  scored at home (0-1-more-all): ",indication(away_team_scores_list_at_home ))
+        print(away_team_scores_list_at_home )
         print(f"{away_name}  conceded at home (0-1-more-all): ",indication(away_team_conceded_list_at_home))
         print(away_team_conceded_list_at_home)
         print(f"{away_name}  scored as visitors (0-1-more-all): ",indication(away_team_scores_list_away))
@@ -116,5 +121,5 @@ def teams_stat(link):
         print(f"{away_name}  conceded as visitors (0-1-more-all): ",indication(away_team_conceded_list_away))
         print(away_team_conceded_list_away)
 teams_stat(url)
-
+print(time.time() - start)
 

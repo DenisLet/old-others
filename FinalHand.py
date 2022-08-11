@@ -1,10 +1,14 @@
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
+start = time.time()
 url = "https://www.handball24.com/match/65cH7HcN/#/match-summary/match-summary"
 try:
-    browser = webdriver.Chrome()
+    caps = DesiredCapabilities().CHROME
+    caps["pageLoadStrategy"] = "eager"
+    browser = webdriver.Chrome(desired_capabilities=caps)
     browser.get(url)
     browser.implicitly_wait(1)
     links = browser.find_elements(By.CSS_SELECTOR,"a.participant__participantName")
@@ -201,3 +205,4 @@ try:
     print("FT :", sorted(ft_away_conceded_at))
 finally:
     browser.quit()
+    print(time.time() - start)
