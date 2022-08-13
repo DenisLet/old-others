@@ -1,31 +1,22 @@
-import selenium
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from functools import reduce
-import time
-stat = time.time()
-url = "https://www.soccer24.com/match/dbl6EBjK/#/match-summary"
+
 
 try:
-    caps = DesiredCapabilities().CHROME
-    caps["pageLoadStrategy"] = "eager"
-    browser = webdriver.Chrome(desired_capabilities=caps)
+    browser = webdriver.Chrome()
     browser.get(url)
-    team_home =browser.find_elements(By.CSS_SELECTOR,"a.participant__participantName")[0].get_attribute(
-        "href") +"/results/"
-    team_away = browser.find_elements(By.CSS_SELECTOR, "a.participant__participantName")[1].get_attribute(
-        "href") + "/results/"
-    browser.get(team_home)
-    browser.get(team_away)
-    print(team_home)
-    print(team_away)
-    # m1 = WebDriverWait(browser,2).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"a.event__more.event__more--static")))
-    # browser.get(team_away)
-    # m2 =  WebDriverWait(browser,2).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"a.event__more.event__more--static")))
-
+    browser.implicitly_wait(1)
+    vars =  browser.find_elements(By.CSS_SELECTOR,"div.filters__tab")
+    vars[2].click()
+    matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
+    for i in matches:
+        link = i.get_attribute("id")
+        url = f"https://www.soccer24.com/match/{link[4:]}"
+        print(url)
 finally:
+    time.sleep(10)
     browser.quit()
-print(time.time() - stat)
