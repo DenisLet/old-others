@@ -4,7 +4,25 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from functools import reduce
 import time
 start = time.time()
-url = "https://www.soccer24.com/match/Qwvka0CO/#/match-summary/match-summary"
+def creation():
+    try:
+        url = "https://www.soccer24.com"
+        browser = webdriver.Chrome()
+        browser.get(url)
+        resume = input("Select matches and press enter to continue ")
+        browser.implicitly_wait(1)
+        matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
+        checklist = list()
+        for i in matches:
+            link = i.get_attribute("id")
+            urls = f"https://www.soccer24.com/match/{link[4:]}"
+            checklist.append(urls)
+    finally:
+        browser.quit()
+    return checklist
+
+schedule = creation()
+
 def main(url):
     try:
         caps = DesiredCapabilities().CHROME
@@ -130,4 +148,6 @@ def main(url):
     finally:
         print(time.time() - start)
         browser.quit()
-main(url)
+
+for i in schedule:
+    main(i)
