@@ -90,12 +90,12 @@ def main(url):
                     else:
                         away_matches.append(i)
             return home_matches, away_matches
-        team1_home,team1_away = separation_home_away(home_team_name,games[0])
-        team2_home,team2_away = separation_home_away(away_team_name,games[1])
-        for i in team1_home:
-            print(i)
-        for i in team1_away:
-            print(i)
+        team1_home,team1_away = separation_home_away(home_team_name,games[0])     # 1 team home / away matches
+        team2_home,team2_away = separation_home_away(away_team_name,games[1])     # 2 team home / away matches
+        # for i in team1_home:
+        #     print(i)
+        # for i in team1_away:
+        #     print(i)
         def indication(list):
             null, one, more, amount = 0, 0, 0, 0
             for i in list:
@@ -113,7 +113,6 @@ def main(url):
         def first_half_results(matches, loc):
             team_scored = list()
             team_coceded = list()
-            total_half = list()
             if loc == "home":
                 scored, conceded = 2, 3
             else:
@@ -125,29 +124,96 @@ def main(url):
                 team_scored.append(int(scores[scored].replace("(", "").replace(")", "")))
                 team_coceded.append(int(scores[conceded].replace("(", "").replace(")", "")))
             return team_scored, team_coceded  # 0 -scored 1 - conceded
+        '''1st half individual collecting '''
         team1_scored_fh_home, team1_conceded_fh_home = first_half_results(team1_home,loc="home")
         team1_scored_fh_away, team1_conceded_fh_away = first_half_results(team1_away,loc="away")
         team2_scored_fh_home, team2_conceded_fh_home = first_half_results(team2_home,loc="home")
         team2_scored_fh_away, team2_conceded_fh_away = first_half_results(team2_away,loc="away")
+
+        def first_half_personal(t1h,t1a,t2h,t2a,team1,team2,link):
+            print(indication(team1_scored_fh_home),team1,"scored home")
+            print(indication((team1)))
+            pass
+
+        def fulltime(matches,loc):
+            team_scored = list()
+            team_coceded = list()
+            if loc == "home":
+                scored, conceded = 0, 1
+            else:
+                scored, conceded = 1, 0
+            for i in matches:
+                scores = [j for j in i if j.isdigit() or j.isalnum() == False][-4:]
+                if "(" in scores[0]:
+                    scores[0], scores[1], scores[2], scores[3] = scores[2], scores[3], scores[0], scores[1]
+                team_scored.append(int(scores[scored].replace("(", "").replace(")", "")))
+                team_coceded.append(int(scores[conceded].replace("(", "").replace(")", "")))
+            return team_scored, team_coceded  # 0 -scored 1 - conceded
+
+        '''full time collecting individual  '''
+        team1_scored_ft_home, team1_conceded_ft_home = fulltime(team1_home,loc="home")    # fh -> first half, ft -> full time
+        team1_scored_ft_away, team1_conceded_ft_away = fulltime(team1_away,loc="away")
+        team2_scored_ft_home, team2_conceded_ft_home = fulltime(team2_home,loc="home")
+        team2_scored_ft_away, team2_conceded_ft_away = fulltime(team2_away,loc="away")
+
+
+        '''full time collecting common '''
+        team1_common_ft_home = [x + y for x, y in zip(team1_scored_ft_home, team1_conceded_ft_home)]
+        team1_common_ft_away = [x + y for x, y in zip(team1_scored_ft_away, team1_conceded_ft_away)]
+        team2_common_ft_home = [x + y for x, y in zip(team2_scored_ft_home, team2_conceded_ft_home)]
+        team2_common_ft_away = [x + y for x, y in zip(team2_scored_ft_away, team2_conceded_ft_away)]
+
+
+        '''second half individual collecting  '''
+        team1_scored_sh_home = [x - y for x, y in zip(team1_scored_ft_home, team1_scored_fh_home)]
+        team1_conceded_sh_home = [x - y for x, y in zip(team1_conceded_ft_home, team1_conceded_fh_home)]    # fh -> first half, ft -> full time, sh -> second half
+        team1_scored_sh_away = [x - y for x, y in zip(team1_scored_ft_away, team1_scored_fh_away)]
+        team1_conceded_sh_away = [x - y for x, y in zip(team1_conceded_ft_away, team1_conceded_fh_away)]
+        team2_scored_sh_home = [x - y for x, y in zip(team2_scored_ft_home, team2_scored_fh_home)]
+        team2_conceded_sh_home = [x - y for x, y in zip(team2_conceded_ft_home, team2_conceded_fh_home)]    # fh -> first half, ft -> full time, sh -> second half
+        team2_scored_sh_away = [x - y for x, y in zip(team2_scored_ft_away, team2_scored_fh_away)]
+        team2_conceded_sh_away = [x - y for x, y in zip(team2_conceded_ft_away, team2_conceded_fh_away)]
+
+        '''second half common collecting '''
+        team1_common_sh_home = [x + y for x, y in zip(team1_scored_sh_home, team1_conceded_sh_home)]
+        team1_common_sh_away = [x + y for x, y in zip(team1_scored_sh_away, team1_conceded_sh_away)]
+        team2_common_sh_home = [x + y for x, y in zip(team2_scored_sh_home, team2_conceded_sh_home)]
+        team2_common_sh_away = [x + y for x, y in zip(team2_scored_sh_away, team2_conceded_sh_away)]
+
+
+        '''1st half common collecting '''
         team1_common_fh_home = [x + y for x, y in zip(team1_scored_fh_home, team1_conceded_fh_home)]
         team1_common_fh_away = [x + y for x, y in zip(team1_scored_fh_away, team1_conceded_fh_away)]
         team2_common_fh_home = [x + y for x, y in zip(team2_scored_fh_home, team2_conceded_fh_home)]
         team2_common_fh_away = [x + y for x, y in zip(team2_scored_fh_away, team2_conceded_fh_away)]
-        print(home_team_name, team1_common_fh_home,indication(team1_common_fh_home),"HOME")
-        print(home_team_name, team1_common_fh_away,indication(team1_common_fh_away),"AWAY")
-        print(away_team_name, team2_common_fh_home,indication(team2_common_fh_home),"HOME")
-        print(away_team_name, team2_common_fh_away,indication(team2_common_fh_away),"AWAY")
-        print()
-        print(home_team_name, team1_scored_fh_home,"RESULT(SCORED):",indication(team1_scored_fh_home))
-        print(away_team_name, team2_scored_fh_away,"RESULT(SCORED):",indication(team2_scored_fh_away))
-        print()
-        print(home_team_name, team1_conceded_fh_home,"RESULT(CONCEDED)",indication(team1_conceded_fh_home))
-        print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
-        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4] > 150:
-            print(url)
+
+
+        def first_half_bet(t1h,t1a,t2h,t2a,team1,team2,link):
+            if indication(t1h)[4] + indication(t2a)[4] > 150:
+                print(team1,indication(t1h),"scored home")
+                print(team1, indication(t1a),"scored away")
+                print(team2, indication(t2h),"scored home")
+                print(team2, indication(t2a),"scored away")
+                print(">1 Common %: ",round(indication(t1h)[4]+indication(t2a)[4])/2)
+                print(link)
+
+
+        # first_half_bet(team1_common_fh_home,team1_common_fh_away,team2_common_fh_home,team2_common_fh_away,home_team_name
+        #               ,away_team_name,url)
+        # print(home_team_name, team1_common_fh_home,indication(team1_common_fh_home),"HOME")
+        # print(home_team_name, team1_common_fh_away,indication(team1_common_fh_away),"AWAY")
+        # print(away_team_name, team2_common_fh_home,indication(team2_common_fh_home),"HOME")
+        # print(away_team_name, team2_common_fh_away,indication(team2_common_fh_away),"AWAY")
+        # print()
+        # print(home_team_name, team1_scored_fh_home,"RESULT(SCORED):",indication(team1_scored_fh_home))
+        # print(away_team_name, team2_scored_fh_away,"RESULT(SCORED):",indication(team2_scored_fh_away))
+        # print()
+        # print(home_team_name, team1_conceded_fh_home,"RESULT(CONCEDED)",indication(team1_conceded_fh_home))
+        # print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
+        # if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4] > 150:
+        #     print(url)
     finally:
         print(time.time() - start)
-        browser.quit()
-
+        # browser.quit()
 for i in schedule:
     main(i)
