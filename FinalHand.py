@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 start = time.time()
-url = "https://www.handball24.com/match/65cH7HcN/#/match-summary/match-summary"
+url = "https://www.handball24.com/match/vHb4GJGD/#/match-summary"
 try:
     caps = DesiredCapabilities().CHROME
     caps["pageLoadStrategy"] = "eager"

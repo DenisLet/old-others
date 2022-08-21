@@ -191,7 +191,7 @@ def main(url):
 
 
         def first_half_bet(t1h,t1a,t2h,t2a,team1,team2,link):
-            if indication(t1h)[4] + indication(t2a)[4] > 150:
+            if indication(t1h)[4] + indication(t2a)[4] > 156:
                 print(team1,indication(t1h),"scored home")
                 print(team1, indication(t1a),"scored away")
                 print(team2, indication(t2h),"scored home")
@@ -213,7 +213,7 @@ def main(url):
         # print("1 HALF CONCEDED ")
         # print(home_team_name, team1_conceded_fh_home,"RESULT(CONCEDED)",indication(team1_conceded_fh_home))
         # print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
-        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4]>150:
+        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4]>170:
             print("1 HALF COMMON")
             print(home_team_name, team1_common_fh_home, indication(team1_common_fh_home), "HOME")
             print(home_team_name, team1_common_fh_away, indication(team1_common_fh_away), "AWAY")
@@ -226,7 +226,7 @@ def main(url):
             print(home_team_name, team1_conceded_fh_home, "RESULT(CONCEDED)", indication(team1_conceded_fh_home))
             print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
             print(url)
-        if indication(team1_common_ft_home)[4] + indication(team2_common_ft_away)[4] > 184:
+        if indication(team1_common_ft_home)[4] + indication(team2_common_ft_away)[4] > 190:
             print("FULLTIME")
             print(home_team_name, team1_common_ft_home, indication(team1_common_ft_home), "HOME")
             print(home_team_name, team1_common_ft_away, indication(team1_common_ft_away), "AWAY")
@@ -239,7 +239,7 @@ def main(url):
             print(home_team_name, team1_conceded_ft_home,"RESULT(CONCEDED)",indication(team1_conceded_ft_home))
             print(away_team_name, team2_conceded_ft_away, "RESULT(CONCEDED)", indication(team2_conceded_ft_away))
             print(url)
-        if  indication(team1_common_sh_home)[4] + indication(team2_common_sh_away)[4] > 170:
+        if  indication(team1_common_sh_home)[4] + indication(team2_common_sh_away)[4] > 188:
             print("2 HALF COMMON")
             print(home_team_name, team1_common_sh_home,indication(team1_common_sh_home),"HOME")
             print(home_team_name, team1_common_sh_away,indication(team1_common_sh_away),"AWAY")
