@@ -4,6 +4,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from functools import reduce
 import time
 start = time.time()
+
 def creation():
     try:
         url = "https://www.soccer24.com"
@@ -23,11 +24,12 @@ def creation():
 
 schedule = creation()
 
-def main(url):
+caps = DesiredCapabilities().CHROME
+caps["pageLoadStrategy"] = "eager"
+b = webdriver.Chrome(desired_capabilities=caps)
+
+def main(url,browser):
     try:
-        caps = DesiredCapabilities().CHROME
-        caps["pageLoadStrategy"] = "eager"
-        browser = webdriver.Chrome(desired_capabilities=caps)
         browser.get(url)
         browser.implicitly_wait(1)
         team_home =browser.find_elements(By.CSS_SELECTOR,"a.participant__participantName")[0].get_attribute(
@@ -272,6 +274,6 @@ def main(url):
             print(url)
     finally:
         print(time.time() - start)
-        # browser.quit()
+        #browser.quit()
 for i in schedule:
-    main(i)
+    main(i,b)

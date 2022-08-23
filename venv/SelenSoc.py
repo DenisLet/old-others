@@ -48,10 +48,15 @@ def main(url):
             matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
             match_list_home = separator(matches)
             browser.get(link2)
+            for i in match_list_home:
+                print(i)
             matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
             match_list_away = separator(matches)
+            for i in match_list_away:
+                print(i)
             return match_list_home,match_list_away
         games = forming(browser, team_home, team_away)
+
         def team_name(list1,list2):
             if len(list1) > 0:
                 team1= set(reduce(lambda i, j: i & j, (set(x) for x in list1)))
