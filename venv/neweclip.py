@@ -224,7 +224,7 @@ def main(url,browser):
         # print(indication(team1_common_fh_home))
         # print(indication(team1_common_fh_home)[4])
 
-        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4]>140:
+        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4]>180:
             print("1 HALF COMMON")
             print(home_team_name, team1_common_fh_home, indication(team1_common_fh_home), "HOME")
             print(home_team_name, team1_common_fh_away, indication(team1_common_fh_away), "AWAY")
@@ -237,7 +237,8 @@ def main(url,browser):
             print(home_team_name, team1_conceded_fh_home, "RESULT(CONCEDED)", indication(team1_conceded_fh_home))
             print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
             print(url)
-        if indication(team1_common_ft_home)[4] + indication(team2_common_ft_away)[4] > 150:
+        if (indication(team1_common_ft_home)[4] + indication(team2_common_ft_away)[4] > 198) and \
+                (indication(team1_common_ft_away)[4] + indication(team2_common_ft_home)[4] > 198):
             print("FULLTIME")
             print(home_team_name, team1_common_ft_home, indication(team1_common_ft_home), "HOME")
             print(home_team_name, team1_common_ft_away, indication(team1_common_ft_away), "AWAY")
@@ -250,7 +251,7 @@ def main(url,browser):
             print(home_team_name, team1_conceded_ft_home,"RESULT(CONCEDED)",indication(team1_conceded_ft_home))
             print(away_team_name, team2_conceded_ft_away, "RESULT(CONCEDED)", indication(team2_conceded_ft_away))
             print(url)
-        if  indication(team1_common_sh_home)[4] + indication(team2_common_sh_away)[4] > 1140:
+        if  indication(team1_common_sh_home)[4] + indication(team2_common_sh_away)[4] > 183:
             print("2 HALF COMMON")
             print(home_team_name, team1_common_sh_home,indication(team1_common_sh_home),"HOME")
             print(home_team_name, team1_common_sh_away,indication(team1_common_sh_away),"AWAY")
@@ -263,8 +264,8 @@ def main(url,browser):
             print(home_team_name, team1_conceded_sh_home,"RESULT(CONCEDED)",indication(team1_conceded_sh_home))
             print(away_team_name, team2_conceded_sh_away, "RESULT(CONCEDED)", indication(team2_conceded_sh_away))
             print(url)
-        if (indication(team1_scored_ft_home)[4] > 85 and indication(team2_conceded_ft_away)[4] > 85)\
-                or (indication(team1_conceded_ft_home)[4] > 85 and indication(team2_scored_ft_away)[4] > 85):
+        if (indication(team1_scored_ft_home)[4] > 90 and indication(team2_conceded_ft_away)[4] > 90)\
+                or (indication(team1_conceded_ft_home)[4] > 90 and indication(team2_scored_ft_away)[4] > 90):
             print("FULLTIME SCORED")
             print(home_team_name, team1_scored_ft_home,"RESULT(SCORED):",indication(team1_scored_ft_home))
             print(away_team_name, team2_scored_ft_away,"RESULT(SCORED):",indication(team2_scored_ft_away))
@@ -277,3 +278,4 @@ def main(url,browser):
         #browser.quit()
 for i in schedule:
     main(i,b)
+b.quit()

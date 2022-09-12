@@ -4,12 +4,13 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from functools import reduce
 import time
 start = time.time()
+
 def creation():
     try:
         url = "https://www.soccer24.com"
         browser = webdriver.Chrome()
         browser.get(url)
-        resume = input("Select matches and press enter to continue ")
+        resume = input("Select matches and press enter to continue(Add to favorite) ")
         browser.implicitly_wait(1)
         matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
         checklist = list()
@@ -23,11 +24,12 @@ def creation():
 
 schedule = creation()
 
-def main(url):
+caps = DesiredCapabilities().CHROME
+caps["pageLoadStrategy"] = "eager"
+b = webdriver.Chrome(desired_capabilities=caps)
+
+def main(url,browser):
     try:
-        caps = DesiredCapabilities().CHROME
-        caps["pageLoadStrategy"] = "eager"
-        browser = webdriver.Chrome(desired_capabilities=caps)
         browser.get(url)
         browser.implicitly_wait(1)
         team_home =browser.find_elements(By.CSS_SELECTOR,"a.participant__participantName")[0].get_attribute(
@@ -38,6 +40,8 @@ def main(url):
             match_list = list()
             for i in matches:
                 line = i.text
+                if len([i for i in line.split() if i.isdigit() or "(" in i]) < 4:
+                    continue
                 if "Awrd" in line:
                     continue
                 if "(0)" in line or "(1)" in line or "(2)" in line or "(3)" in line:
@@ -48,12 +52,8 @@ def main(url):
             matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
             match_list_home = separator(matches)
             browser.get(link2)
-            for i in match_list_home:
-                print(i)
             matches = browser.find_elements(By.CSS_SELECTOR,"[id^='g_1']")
             match_list_away = separator(matches)
-            for i in match_list_away:
-                print(i)
             return match_list_home,match_list_away
         games = forming(browser, team_home, team_away)
 
@@ -112,7 +112,10 @@ def main(url):
                 if i > 1:
                     more += 1
             def percantage(null,one,more,amount):
-                return round(100 - (null / amount) * 100)
+                if amount == 0:
+                    return  1
+                else:
+                    return round(100 - (null / amount) * 100)
             return null, one, more, amount, percantage(null,one,more,amount)
 
         def first_half_results(matches, loc):
@@ -218,7 +221,10 @@ def main(url):
         # print("1 HALF CONCEDED ")
         # print(home_team_name, team1_conceded_fh_home,"RESULT(CONCEDED)",indication(team1_conceded_fh_home))
         # print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
-        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4]>170:
+        # print(indication(team1_common_fh_home))
+        # print(indication(team1_common_fh_home)[4])
+
+        if indication(team1_common_fh_home)[4] + indication(team2_common_fh_away)[4]>150:
             print("1 HALF COMMON")
             print(home_team_name, team1_common_fh_home, indication(team1_common_fh_home), "HOME")
             print(home_team_name, team1_common_fh_away, indication(team1_common_fh_away), "AWAY")
@@ -231,7 +237,8 @@ def main(url):
             print(home_team_name, team1_conceded_fh_home, "RESULT(CONCEDED)", indication(team1_conceded_fh_home))
             print(away_team_name, team2_conceded_fh_away, "RESULT(CONCEDED)", indication(team2_conceded_fh_away))
             print(url)
-        if indication(team1_common_ft_home)[4] + indication(team2_common_ft_away)[4] > 190:
+        if (indication(team1_common_ft_home)[4] + indication(team2_common_ft_away)[4] > 180) and \
+                (indication(team1_common_ft_away)[4] + indication(team2_common_ft_home)[4] > 180):
             print("FULLTIME")
             print(home_team_name, team1_common_ft_home, indication(team1_common_ft_home), "HOME")
             print(home_team_name, team1_common_ft_away, indication(team1_common_ft_away), "AWAY")
@@ -244,7 +251,7 @@ def main(url):
             print(home_team_name, team1_conceded_ft_home,"RESULT(CONCEDED)",indication(team1_conceded_ft_home))
             print(away_team_name, team2_conceded_ft_away, "RESULT(CONCEDED)", indication(team2_conceded_ft_away))
             print(url)
-        if  indication(team1_common_sh_home)[4] + indication(team2_common_sh_away)[4] > 188:
+        if  indication(team1_common_sh_home)[4] + indication(team2_common_sh_away)[4] > 150:
             print("2 HALF COMMON")
             print(home_team_name, team1_common_sh_home,indication(team1_common_sh_home),"HOME")
             print(home_team_name, team1_common_sh_away,indication(team1_common_sh_away),"AWAY")
@@ -257,8 +264,18 @@ def main(url):
             print(home_team_name, team1_conceded_sh_home,"RESULT(CONCEDED)",indication(team1_conceded_sh_home))
             print(away_team_name, team2_conceded_sh_away, "RESULT(CONCEDED)", indication(team2_conceded_sh_away))
             print(url)
+        if (indication(team1_scored_ft_home)[4] > 70 and indication(team2_conceded_ft_away)[4] > 70)\
+                or (indication(team1_conceded_ft_home)[4] > 70 and indication(team2_scored_ft_away)[4] > 70):
+            print("FULLTIME SCORED")
+            print(home_team_name, team1_scored_ft_home,"RESULT(SCORED):",indication(team1_scored_ft_home))
+            print(away_team_name, team2_scored_ft_away,"RESULT(SCORED):",indication(team2_scored_ft_away))
+            print("FULLTIME CONCEDED ")
+            print(home_team_name, team1_conceded_ft_home,"RESULT(CONCEDED)",indication(team1_conceded_ft_home))
+            print(away_team_name, team2_conceded_ft_away, "RESULT(CONCEDED)", indication(team2_conceded_ft_away))
+            print(url)
     finally:
         print(time.time() - start)
-        # browser.quit()
+        #browser.quit()
 for i in schedule:
-    main(i)
+    main(i,b)
+b.quit()
