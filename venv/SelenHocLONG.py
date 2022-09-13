@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from functools import reduce
 import time
 start = time.time()
@@ -50,10 +52,15 @@ def main(url,browser):
 
     def forming(browser, link1, link2):  # NEED ADD TYPE SPORT AND FIXABLE CSS SELECTOR
         browser.get(link1)
-        browser.find_element(By.CSS_SELECTOR,"")
+        browser.execute_script("arguments[0].click();", WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "a.event__more.event__more--static"))))
+        time.sleep(3)
         matches = browser.find_elements(By.CSS_SELECTOR, "[id^='g_4']")
         match_list_home = separator(matches)
         browser.get(link2)
+        browser.execute_script("arguments[0].click();", WebDriverWait(browser, 20).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "a.event__more.event__more--static"))))
+        time.sleep(3)
         matches = browser.find_elements(By.CSS_SELECTOR, "[id^='g_4']")
         match_list_away = separator(matches)
         return match_list_home, match_list_away
@@ -62,8 +69,19 @@ def main(url,browser):
     for i in games[0]:
         print(i)
 
+    def team_name(list1, list2):
+        if len(list1) > 0:
+            team1 = set(reduce(lambda i, j: i & j, (set(x) for x in list1)))
+        else:
+            team1 = ""
+        if len(list2) > 0:
+            team2 = set(reduce(lambda i, j: i & j, (set(x) for x in list2)))
+        else:
+            team2 = ""
+        return [x for x in team1 if x.isalpha()], [x for x in team2 if x.isalpha()]
 
-
+    home_team_name, away_team_name = team_name(games[0], games[1])
+    print(home_team_name,away_team_name)
 
 for i in schedule:
     main(i,b)

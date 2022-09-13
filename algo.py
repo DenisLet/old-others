@@ -1,12 +1,5 @@
-def sum(a,b):
-    result =  a+b
-
-    with open("result.txt",'w',encoding="utf-8") as file:
-        file.write(str(result))
-
-def main():
-    a = int(input("a:"))
-    b = int(input("b:"))
-    sum(a,b)
-if __name__ == '__main__':
-    main()
+x = set([1,2,3,"jj","kk"])
+x.discard(1)
+x.discard(0)
+x.discard(2)
+print(x)
