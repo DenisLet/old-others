@@ -89,9 +89,13 @@ def main(url,browser):
     team1_home, team1_away = separation_home_away(home_team_name, games[0])  # 1 team home / away matches
     team2_home, team2_away = separation_home_away(away_team_name, games[1])  # 2 team home / away matches
 
-    for i in team1_home:
+
+
+
+
+    for i in team2_home:
         print(i)
-    for i in team1_away:
+    for i in team2_away:
         print(i)
 for i in schedule:
     main(i,b)
