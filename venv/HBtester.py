@@ -103,7 +103,6 @@ def main(url,browser):
     def results_first_half(matches,team,loc):
         count=0
         for i in team:
-            print(i)
             if i.isdigit():
                 count+=1
         team_scored = []
