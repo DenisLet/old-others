@@ -100,29 +100,42 @@ def main(url,browser):
     team2_home, team2_away = separation_home_away(away_team_name, games[1])  # 2 team home / away matches
 
     def results_first_half(matches,loc):
+
+
         team_scored = []
         team_conceded = []
         if loc == "home":
-            scored, conceded = 2, 3
+            scored, conceded = 2 , 3
         else:
-            scored, conceded = 3, 2
+            scored, conceded = 3 , 2
         for i in matches:
-            scores = [j for j in i if j.isdigit()]
+            print(i)
+            if "Pen" in i or "AET" in i:
+                 scores = i[-9:-3]
+            else:
+                scores = i[-7:-1]
+            print(scores)
             team_scored.append(int(scores[scored]))
             team_conceded.append(int(scores[conceded]))
+
         return team_scored,team_conceded
 
     def results_second_half(matches, loc):
+
         team_scored = list()
         team_coceded = list()
         if loc == "home":
-            scored,conceded = 4, 5
+            scored,conceded = 4 , 5
         else:
-            scored,conceded = 5, 4
+            scored,conceded = 5 , 4
         for i in matches:
-            scores = [j for j in i if j.isdigit()]
+            if "Pen" in i or "AET" in i:
+                scores = i[-9:-3]
+            else:
+                scores = i[-7:-1]
             team_scored.append(int(scores[scored]))
             team_coceded.append(int(scores[conceded]))
+
         return team_scored, team_coceded  # 4 -scored 5 - conceded
 
     def fulltime(home,away):
@@ -141,7 +154,6 @@ def main(url,browser):
     team1_scored_sh_away, team1_conceded_sh_away = results_second_half(team1_away, loc="away")
     team2_scored_sh_home, team2_conceded_sh_home = results_second_half(team2_home, loc="home")
     team2_scored_sh_away, team2_conceded_sh_away = results_second_half(team2_away, loc="away")
-
     '''teams fulltime indinvidual'''
 
     team1_ft_home_scored = fulltime(team1_scored_fh_home,team1_scored_sh_home)
