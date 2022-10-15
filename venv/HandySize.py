@@ -89,8 +89,9 @@ def main(url,browser):
                     home_matches.append(i)
                 elif i[2] in team_ and i[3] in team_ and ":" in i[1]:
                     home_matches.append(i)
-                elif (i[1] == "AET" or i[2] == "AET" or i[1] == "Pen" or i[2] == "Pen") and i[3] in team_ and i[
-                    4] in team_:
+                elif ((i[1] == "AET" or i[1] == "Pen") and i[2] in team_ and i[
+                        3] in team_) or ((i[2] == "AET" or i[2] == "Pen") and i[3] in team_ and i[
+                        4] in team_):
                     home_matches.append(i)
                 else:
                     away_matches.append(i)
@@ -99,8 +100,16 @@ def main(url,browser):
     team1_home, team1_away = separation_home_away(home_team_name, games[0])  # 1 team home / away matches
     team2_home, team2_away = separation_home_away(away_team_name, games[1])  # 2 team home / away matches
 
-    def results_first_half(matches,loc):
+    for i in team1_home:
+        print(i)
+    for i in team1_away:
+        print(i)
+    for i in team2_home:
+        print(i)
+    for i in team2_away:
+        print(i)
 
+    def results_first_half(matches,loc):
 
         team_scored = []
         team_conceded = []
@@ -109,12 +118,10 @@ def main(url,browser):
         else:
             scored, conceded = 3 , 2
         for i in matches:
-            print(i)
             if "Pen" in i or "AET" in i:
                  scores = i[-9:-3]
             else:
                 scores = i[-7:-1]
-            print(scores)
             team_scored.append(int(scores[scored]))
             team_conceded.append(int(scores[conceded]))
 

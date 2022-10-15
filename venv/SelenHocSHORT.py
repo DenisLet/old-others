@@ -97,6 +97,8 @@ def main(url,browser):
         print(i)
     for i in team2_away:
         print(i)
+
+
 for i in schedule:
     main(i,b)
 b.quit()
