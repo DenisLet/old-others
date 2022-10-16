@@ -127,6 +127,10 @@ def main(url,browser):
     for i in team2_away:
         print(i)
 
+
+
+
+
     print(home_team_name,away_team_name)
 
 for i in schedule:

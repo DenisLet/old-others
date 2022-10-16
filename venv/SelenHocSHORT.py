@@ -69,7 +69,7 @@ def main(url,browser):
 
     games = forming(browser, team_home, team_away)
 
-    home_team_name, away_team_name  = games[2].split(),games[3].split()
+    home_team_name, away_team_name  = games[2].split(), games[3].split()
 
     print(home_team_name,away_team_name)
 
@@ -90,7 +90,10 @@ def main(url,browser):
     team2_home, team2_away = separation_home_away(away_team_name, games[1])  # 2 team home / away matches
 
 
-
+    for i in team1_home:
+        print(i)
+    for i in team1_away:
+        print(i)
 
 
     for i in team2_home:
@@ -98,6 +101,59 @@ def main(url,browser):
     for i in team2_away:
         print(i)
 
+    def results(matches,loc,period):
+        if period == "first":
+            x,y = 2,3
+        if period == "second":
+            x,y = 4,5
+        if period == "third":
+            x,y = 6,7
+        team_scored = []
+        team_conceded = []
+        if loc == "home":
+            scored, conceded = x , y
+        else:
+            scored, conceded = y , x
+        for i in matches:
+            if "Pen" in i or "AOT" in i:
+                 scores = i[-11:-1]
+            else:
+                scores = i[-9:-1]
+            team_scored.append(int(scores[scored]))
+            team_conceded.append(int(scores[conceded]))
+
+        return team_scored,team_conceded
+
+    ''' 1st period results individual '''
+
+    team1_scored_1p_home, team1_conceded_1p_home = results(team1_home, loc="home",period="first")
+    team1_scored_1p_away, team1_conceded_1p_away = results(team1_away, loc="away",period="first")
+    team2_scored_1p_home, team2_conceded_1p_home = results(team2_home, loc="home",period="first")
+    team2_scored_1p_away, team2_conceded_1p_away = results(team2_away, loc="away",period="first")
+
+    '''2nd period results individual'''
+
+    team1_scored_2p_home, team1_conceded_2p_home = results(team1_home, loc="home",period="second")
+    team1_scored_2p_away, team1_conceded_2p_away = results(team1_away, loc="away",period="second")
+    team2_scored_2p_home, team2_conceded_2p_home = results(team2_home, loc="home",period="second")
+    team2_scored_2p_away, team2_conceded_2p_away = results(team2_away, loc="away",period="second")
+
+    '''3rd period results individual'''
+
+    team1_scored_3p_home, team1_conceded_3p_home = results(team1_home, loc="home",period="third")
+    team1_scored_3p_away, team1_conceded_3p_away = results(team1_away, loc="away",period="third")
+    team2_scored_3p_home, team2_conceded_3p_home = results(team2_home, loc="home",period="third")
+    team2_scored_3p_away, team2_conceded_3p_away = results(team2_away, loc="away",period="third")
+
+
+    print(team1_scored_1p_home)
+    print(team1_conceded_1p_home)
+    print()
+    print(team1_scored_2p_home)
+    print(team1_conceded_2p_home)
+    print()
+    print(team1_scored_3p_home)
+    print(team1_conceded_3p_home)
 
 for i in schedule:
     main(i,b)
