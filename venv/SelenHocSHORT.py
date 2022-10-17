@@ -42,11 +42,11 @@ def main(url,browser):
         match_list = list()
         for i in matches:
             line = i.text
-            # print(line)
-            # if "(" in line or "Awrd" in line:
-            #     continue
-            # if len([i for i in line.split() if i.isdigit()]) < 6:
-            #     continue
+            #  print(line)
+            if "(" in line or "Awrd" in line:
+                continue
+            if len([i for i in line.split() if i.isdigit()]) < 6:
+                continue
             match_list.append(line.split())
         return match_list
 
@@ -115,10 +115,13 @@ def main(url,browser):
         else:
             scored, conceded = y , x
         for i in matches:
-            if "Pen" in i or "AOT" in i:
-                 scores = i[-11:-1]
+            if 'Pen' in i:
+                scores = i[-13:-1]
+            elif "AOT" in i:
+                scores = i[-11:-1]
             else:
                 scores = i[-9:-1]
+
             team_scored.append(int(scores[scored]))
             team_conceded.append(int(scores[conceded]))
 
@@ -145,15 +148,85 @@ def main(url,browser):
     team2_scored_3p_home, team2_conceded_3p_home = results(team2_home, loc="home",period="third")
     team2_scored_3p_away, team2_conceded_3p_away = results(team2_away, loc="away",period="third")
 
+    '''Fulltime results individual'''
 
-    print(team1_scored_1p_home)
-    print(team1_conceded_1p_home)
+    def fulltime(period1,period2,period3):
+        return [int(x) +int(y)+ int(z) for x, y, z in zip(period1,period2,period3)]
+
+
+    team1_scored_ft_home = fulltime(team1_scored_1p_home,team1_scored_2p_home,team1_scored_3p_home)
+    team1_scored_ft_away = fulltime(team1_scored_1p_away,team1_scored_2p_away,team1_scored_3p_away)
+    team1_conceded_ft_home = fulltime(team1_conceded_1p_home,team1_conceded_2p_home,team1_conceded_3p_home)
+    team1_conceded_ft_away = fulltime(team1_conceded_1p_away,team1_conceded_2p_away,team1_conceded_3p_away)
+    team2_scored_ft_home = fulltime(team2_scored_1p_home,team2_scored_2p_home,team2_scored_3p_home)
+    team2_scored_ft_away = fulltime(team2_scored_1p_away,team2_scored_2p_away,team2_scored_3p_away)
+    team2_conceded_ft_home = fulltime(team2_conceded_1p_home,team2_conceded_2p_home,team2_conceded_3p_home)
+    team2_conceded_ft_away = fulltime(team2_conceded_1p_away,team2_conceded_2p_away,team2_conceded_3p_away)
+
+    '''Fulltime results common'''
+
+    team1_common_ft_home = [x + y for x, y in zip(team1_scored_ft_home, team1_conceded_ft_home)]
+    team1_common_ft_away = [x + y for x, y in zip(team1_scored_ft_away, team1_conceded_ft_away)]
+    team2_common_ft_home = [x + y for x, y in zip(team2_scored_ft_home, team2_conceded_ft_home)]
+    team2_common_ft_away = [x + y for x, y in zip(team2_scored_ft_away, team2_conceded_ft_away)]
+
+    '''1st period common result'''
+
+    team1_common_1p_home = [x + y for x, y in zip(team1_scored_1p_home, team1_conceded_1p_home)]
+    team1_common_1p_away = [x + y for x, y in zip(team1_scored_1p_away, team1_conceded_1p_away)]
+    team2_common_1p_home = [x + y for x, y in zip(team2_scored_1p_home, team2_conceded_1p_home)]
+    team2_common_1p_away = [x + y for x, y in zip(team2_scored_1p_away, team2_conceded_1p_away)]
+
+
+    print(team1_common_1p_home)
+    print(team1_common_1p_away)
+    print(team2_common_1p_home)
+    print(team2_common_1p_away)
+
+
+    '''2nd period common result'''
+
+    team1_common_2p_home = [x + y for x, y in zip(team1_scored_2p_home, team1_conceded_2p_home)]
+    team1_common_2p_away = [x + y for x, y in zip(team1_scored_2p_away, team1_conceded_2p_away)]
+    team2_common_2p_home = [x + y for x, y in zip(team2_scored_2p_home, team2_conceded_2p_home)]
+    team2_common_2p_away = [x + y for x, y in zip(team2_scored_2p_away, team2_conceded_2p_away)]
+
+    print(team1_common_2p_home)
+    print(team1_common_2p_away)
+    print(team2_common_2p_home)
+    print(team2_common_2p_away)
+
+    '''3rd period common result'''
+
+    team1_common_3p_home = [x + y for x, y in zip(team1_scored_3p_home, team1_conceded_3p_home)]
+    team1_common_3p_away = [x + y for x, y in zip(team1_scored_3p_away, team1_conceded_3p_away)]
+    team2_common_3p_home = [x + y for x, y in zip(team2_scored_3p_home, team2_conceded_3p_home)]
+    team2_common_3p_away = [x + y for x, y in zip(team2_scored_3p_away, team2_conceded_3p_away)]
+
+    print(team1_common_3p_home)
+    print(team1_common_3p_away)
+    print(team2_common_3p_home)
+    print(team2_common_3p_away)
+
+    # print(team1_scored_1p_home)
+    # print(team1_conceded_1p_home)
+    # print()
+    # print(team1_scored_2p_home)
+    # print(team1_conceded_2p_home)
+    # print()
+    # print(team1_scored_3p_home)
+    # print(team1_conceded_3p_home)
     print()
-    print(team1_scored_2p_home)
-    print(team1_conceded_2p_home)
+    print(team1_scored_1p_away)
+    print(team1_conceded_1p_away)
     print()
-    print(team1_scored_3p_home)
-    print(team1_conceded_3p_home)
+    print(team1_scored_2p_away)
+    print(team1_conceded_2p_away)
+    print()
+    print(team1_scored_3p_away)
+    print(team1_conceded_3p_away)
+
+
 
 for i in schedule:
     main(i,b)
