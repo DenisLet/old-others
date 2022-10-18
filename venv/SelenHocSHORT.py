@@ -177,13 +177,6 @@ def main(url,browser):
     team2_common_1p_home = [x + y for x, y in zip(team2_scored_1p_home, team2_conceded_1p_home)]
     team2_common_1p_away = [x + y for x, y in zip(team2_scored_1p_away, team2_conceded_1p_away)]
 
-
-    print(team1_common_1p_home)
-    print(team1_common_1p_away)
-    print(team2_common_1p_home)
-    print(team2_common_1p_away)
-
-
     '''2nd period common result'''
 
     team1_common_2p_home = [x + y for x, y in zip(team1_scored_2p_home, team1_conceded_2p_home)]
@@ -191,10 +184,7 @@ def main(url,browser):
     team2_common_2p_home = [x + y for x, y in zip(team2_scored_2p_home, team2_conceded_2p_home)]
     team2_common_2p_away = [x + y for x, y in zip(team2_scored_2p_away, team2_conceded_2p_away)]
 
-    print(team1_common_2p_home)
-    print(team1_common_2p_away)
-    print(team2_common_2p_home)
-    print(team2_common_2p_away)
+
 
     '''3rd period common result'''
 
@@ -203,30 +193,91 @@ def main(url,browser):
     team2_common_3p_home = [x + y for x, y in zip(team2_scored_3p_home, team2_conceded_3p_home)]
     team2_common_3p_away = [x + y for x, y in zip(team2_scored_3p_away, team2_conceded_3p_away)]
 
-    print(team1_common_3p_home)
-    print(team1_common_3p_away)
-    print(team2_common_3p_home)
-    print(team2_common_3p_away)
+    '''Total calculation'''
 
-    # print(team1_scored_1p_home)
-    # print(team1_conceded_1p_home)
-    # print()
-    # print(team1_scored_2p_home)
-    # print(team1_conceded_2p_home)
-    # print()
-    # print(team1_scored_3p_home)
-    # print(team1_conceded_3p_home)
-    print()
-    print(team1_scored_1p_away)
-    print(team1_conceded_1p_away)
-    print()
-    print(team1_scored_2p_away)
-    print(team1_conceded_2p_away)
-    print()
-    print(team1_scored_3p_away)
-    print(team1_conceded_3p_away)
+    def calc(list):
+        matches = 0
+        zero, one, two, three, four, more = 0, 0, 0, 0, 0, 0
+        for i in list:
+            matches += 1
+            if int(i) == 0:
+                zero += 1
+            elif int(i) == 1:
+                one += 1
+            elif int(i) == 2:
+                two += 1
+            elif int(i) == 3:
+                three += 1
+            elif int(i) == 4:
+                four += 1
+            else:
+                more += 1
+        return zero, one, two, three, four, more, matches
 
 
+
+
+    '''Printer'''
+
+    print("<<<<<HOME TEAM RESULTS>>>>>", home_team_name)
+    print("<<<<<    1ST PERIOD   >>>>>")
+    print("1ST PERIOD SCORED  HOME: ",team1_scored_1p_home,calc(team1_scored_1p_home))
+    print("1ST PERIOD CONCED. HOME: ",team1_conceded_1p_home,calc(team1_conceded_1p_home))
+    print("1ST PERIOD SCORED  AWAY: ",team1_scored_1p_away,calc(team1_scored_1p_away))
+    print("1ST PERIOD CONCED. AWAY: ",team1_conceded_1p_away,calc(team1_conceded_1p_away))
+    print("1ST PERIOD COMMON HOME : ",team1_common_1p_home,calc(team1_common_1p_home))
+    print("1ST PERIOD COMMON AWAY : ",team1_common_1p_away,calc(team1_common_1p_away))
+    print("<<<<<    2ND PERIOD   >>>>>")
+    print("2ND PERIOD SCORED  HOME: ",team1_scored_2p_home,calc(team1_scored_2p_home))
+    print("2ND PERIOD CONCED. HOME: ",team1_conceded_2p_home,calc(team1_conceded_2p_home))
+    print("2ND PERIOD SCORED  AWAY: ",team1_scored_2p_away,calc(team1_scored_2p_away))
+    print("2ND PERIOD CONCED. AWAY: ",team1_conceded_2p_away,calc(team1_conceded_2p_away))
+    print("2ND PERIOD COMMON HOME : ",team1_common_2p_home,calc(team1_common_2p_home))
+    print("2ND PERIOD COMMON AWAY : ",team1_common_2p_away,calc(team1_common_2p_away))
+    print("<<<<<    3RD PERIOD   >>>>>")
+    print("3RD PERIOD SCORED  HOME: ",team1_scored_3p_home,calc(team1_scored_3p_home))
+    print("3RD PERIOD CONCED. HOME: ",team1_conceded_3p_home,calc(team1_conceded_3p_home))
+    print("3RD PERIOD SCORED  AWAY: ",team1_scored_3p_away,calc(team1_scored_3p_away))
+    print("3RD PERIOD CONCED. AWAY: ",team1_conceded_3p_away,calc(team1_conceded_3p_away))
+    print("3RD PERIOD COMMON HOME : ",team1_common_3p_home,calc(team1_common_3p_home))
+    print("3RD PERIOD COMMON AWAY : ",team1_common_3p_away,calc(team1_common_3p_away))
+    print("<<<<<    FULLTIME   >>>>>")
+    print("SCORED   FULLTIME  HOME: ",team1_scored_ft_home,calc(team1_scored_ft_home))
+    print("CONCEDED FULLTIME  HOME: ",team1_conceded_ft_home,calc(team1_conceded_ft_home))
+    print("SCORED   FULLTIME  AWAY: ",team1_scored_ft_away,calc(team1_scored_ft_away))
+    print("CONCEDED FULLTIME  AWAY: ",team1_conceded_ft_away,calc(team1_conceded_ft_away))
+    print("SCORED    COMMON   HOME: ",team1_common_ft_home,calc(team1_common_ft_home) )
+    print("SCORED    COMMON   AWAY: ",team1_common_ft_away,calc(team1_common_ft_away) )
+    print("*"*40)
+    print("<<<<<AWAY TEAM RESULTS>>>>>", away_team_name)
+    print("<<<<<    1ST PERIOD   >>>>>")
+    print("1ST PERIOD SCORED  HOME: ", team2_scored_1p_home,calc(team2_scored_1p_home))
+    print("1ST PERIOD CONCED. HOME: ", team2_conceded_1p_home,calc(team2_conceded_1p_home))
+    print("1ST PERIOD SCORED  AWAY: ", team2_scored_1p_away,calc(team2_scored_1p_away))
+    print("1ST PERIOD CONCED. AWAY: ", team2_conceded_1p_away,calc(team2_conceded_1p_away))
+    print("1ST PERIOD COMMON HOME : ", team2_common_1p_home,calc(team2_common_1p_home))
+    print("1ST PERIOD COMMON AWAY : ", team2_common_1p_away,calc(team2_common_1p_away))
+    print("<<<<<    2ND PERIOD   >>>>>")
+    print("2ND PERIOD SCORED  HOME: ", team2_scored_2p_home,calc(team2_scored_2p_home))
+    print("2ND PERIOD CONCED. HOME: ", team2_conceded_2p_home,calc(team2_conceded_2p_home))
+    print("2ND PERIOD SCORED  AWAY: ", team2_scored_2p_away,calc(team2_scored_2p_away))
+    print("2ND PERIOD CONCED. AWAY: ", team2_conceded_2p_away,calc(team2_conceded_2p_away))
+    print("2ND PERIOD COMMON HOME : ", team2_common_2p_home,calc(team2_common_2p_home))
+    print("2ND PERIOD COMMON AWAY : ", team2_common_2p_away,calc(team2_common_2p_away))
+    print("<<<<<    3RD PERIOD   >>>>>")
+    print("3RD PERIOD SCORED  HOME: ", team2_scored_3p_home,calc(team2_scored_3p_home))
+    print("3RD PERIOD CONCED. HOME: ", team2_conceded_3p_home,calc(team2_conceded_3p_home))
+    print("3RD PERIOD SCORED  AWAY: ", team2_scored_3p_away,calc(team2_scored_3p_away))
+    print("3RD PERIOD CONCED. AWAY: ", team2_conceded_3p_away,calc(team2_conceded_3p_away))
+    print("3RD PERIOD COMMON HOME : ", team2_common_3p_home,calc(team2_common_3p_home))
+    print("3RD PERIOD COMMON AWAY : ", team2_common_3p_away,calc(team2_common_3p_away))
+    print("<<<<<    FULLTIME   >>>>>")
+    print("SCORED   FULLTIME  HOME: ", team2_scored_ft_home,calc(team2_scored_ft_home))
+    print("CONCEDED FULLTIME  HOME: ", team2_conceded_ft_home,calc(team2_conceded_ft_home))
+    print("SCORED   FULLTIME  AWAY: ", team2_scored_ft_away,calc(team2_scored_ft_away))
+    print("CONCEDED FULLTIME  AWAY: ", team2_conceded_ft_away,calc(team2_conceded_ft_away))
+    print("SCORED    COMMON   HOME: ", team2_common_ft_home,calc(team2_common_ft_home))
+    print("SCORED    COMMON   AWAY: ", team2_common_ft_away,calc(team2_common_ft_away))
 
 for i in schedule:
     main(i,b)
