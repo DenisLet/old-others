@@ -43,7 +43,7 @@ def main(url,browser):
         for i in matches:
             line = i.text
             #  print(line)
-            if "(" in line or "Awrd" in line:
+            if "(" in line or "Awrd" in line or "Abn" in line:
                 continue
             if len([i for i in line.split() if i.isdigit()]) < 6:
                 continue
@@ -71,13 +71,25 @@ def main(url,browser):
 
     home_team_name, away_team_name  = games[2].split(), games[3].split()
 
+
+
+
     print(home_team_name,away_team_name)
 
     def separation_home_away(team_, all_matches):
         home_matches = list()
         away_matches = list()
-        for i in all_matches:
+        waste = ["W","U18","U20","U21"]
+        for i in waste:
+            if i in team_:
+                team_ = [j for j in team_ if j not in waste]
+        print(team_)
+        for k in all_matches:
+            i = [j for j in k[:len(k)-1] if j not in waste]+k[-1:]
+
             x = i.index(team_[len(team_)-1])
+            print(team_[len(team_)-1])
+            print(x)
             if i[x+1].isdigit():
                 away_matches.append(i)
             elif "(" in i[x+1] and i[x+2].isdigit():
@@ -91,15 +103,15 @@ def main(url,browser):
 
 
     for i in team1_home:
-        print(i)
+     print(i)
     for i in team1_away:
-        print(i)
+     print(i)
 
 
     for i in team2_home:
-        print(i)
+     print(i)
     for i in team2_away:
-        print(i)
+     print(i)
 
     def results(matches,loc,period):
         if period == "first":
@@ -117,11 +129,13 @@ def main(url,browser):
         for i in matches:
             if 'Pen' in i:
                 scores = i[-13:-1]
+
             elif "AOT" in i:
                 scores = i[-11:-1]
+
             else:
                 scores = i[-9:-1]
-
+            print(scores)
             team_scored.append(int(scores[scored]))
             team_conceded.append(int(scores[conceded]))
 
